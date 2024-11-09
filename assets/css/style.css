@@ -4,14 +4,153 @@ jura for title, logo, nav
 */
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Jura:wght@300..700&display=swap');
 
+/*Wildcard selector*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 /* General */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    /*Generic project styles*/
+    font-family: "cabin", sans-serif;
+}
 
+a {
+    text-decoration: none;
+    color: #00092C;
+}
+
+h2,
+h3 {
+    margin: 0.5em auto;
+    font-size: 110%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 180%;
+}
+
+p {
+    text-align: justify;
+    line-height: 27px;
+}
 
 /* Header */
+header {
+    background-color: #FF5F00;
+    padding: 1rem 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 1px 1px #FF5F00;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
 
+h1 {
+    font-family: "jura", sans-serif;
+    list-style: none;
+    letter-spacing: 1px;
+}
+
+#menu {
+    list-style: none;
+    letter-spacing: 1px;
+    font-size: 110%;
+}
+
+#menu li {
+    margin-bottom: 1em;
+    background-color: #FF5F00;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    white-space: nowrap;
+}
+
+#menu a:hover {
+    border-bottom: 1px solid #00092C;
+}
+
+.active {
+    border-bottom: 1px solid #00092C;
+}
+
+
+nav {
+    display: block;
+    position: relative;
+    box-shadow: none;
+    width: fit-content;
+    padding-right: 1rem;
+}
+
+
+#menu {
+    display: flex;
+}
+
+#menu>li {
+    padding-left: 1rem;
+}
+
+#logo {
+    line-height: 75px;
+    margin: 0 0.3rem;
+}
 
 /* Main */
-
+main {
+    background-color: bisque;
+    margin-top: 95px;
+}
 
 /* Footer */
+footer {
+    background-color: cadetblue;
+}
+
+
+/* Media Query*/
+@media screen and (max-width:786px) {
+
+    /*Dropdown menu*/
+    nav {
+        position: absolute;
+        background-color: #FF5F00;
+        left: 0;
+        padding: 0 1rem;
+        z-index: 99;
+        width: 100%;
+        box-shadow: 0 1px 1px #FF5F00;
+        display: none;
+        top: 100%;
+    }
+
+    /*Checkbox pseudoclass*/
+    #nav-toggle:checked~nav {
+        display: block;
+    }
+
+    #nav-toggle {
+        display: none
+    }
+
+    .nav-toggle-label {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width:786px) {
+    .nav-toggle-label {
+        display: none;
+
+    }
+}
