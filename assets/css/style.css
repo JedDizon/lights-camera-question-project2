@@ -18,7 +18,9 @@ body {
     margin: 0;
     /*Generic project styles*/
     font-family: "cabin", sans-serif;
-    
+    /*color: #00092C;*/
+    /*push footer down*/
+    min-height: 100vh;
 }
 
 a {
@@ -122,6 +124,9 @@ h1 {
 main {
     background-color: bisque;
     margin-top: 95px;
+    
+    /*make main take up space to push footer down*/
+    flex: 1 0 auto;
 }
 
 /* Footer */
