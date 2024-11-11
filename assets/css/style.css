@@ -18,14 +18,13 @@ body {
     margin: 0;
     /*Generic project styles*/
     font-family: "cabin", sans-serif;
-    /*color: #00092C;*/
-    /*push footer down*/
+    color: #EEEEEE;
     min-height: 100vh;
 }
 
 a {
     text-decoration: none;
-    color: #00092C;
+    color: #EEEEEE;
 }
 
 h2,
@@ -80,11 +79,11 @@ h1 {
 }
 
 #menu a:hover {
-    border-bottom: 1px solid #00092C;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 .active {
-    border-bottom: 1px solid #00092C;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 #logo {
@@ -122,9 +121,9 @@ h1 {
 
 /* Main */
 main {
-    background-color: bisque;
+    background-color: #B20600;
     margin-top: 95px;
-    
+
     /*make main take up space to push footer down*/
     flex: 1 0 auto;
 }
