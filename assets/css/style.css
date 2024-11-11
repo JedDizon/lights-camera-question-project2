@@ -44,18 +44,19 @@ div {
     border-radius: 1em;
     background-color: #00092C;
     margin: 2em;
-/*
+    
+    justify-content: center;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-*/
-    
+    flex-wrap: wrap;    
 }
 
 p {
     text-align: justify;
+    line-height: 27px;
+}
+
+li {
     line-height: 27px;
 }
 
@@ -112,25 +113,25 @@ h1 {
     display: none
 }
 
-    /*Header*/
-    nav {
+/*Header*/
+nav {
         display: block;
         position: relative;
         box-shadow: none;
         width: fit-content;
         padding-right: 1rem;
-    }
+}
 
-    #menu {
+#menu {
         display: flex;
-    }
+   }
 
-    #menu>li {
+#menu>li {
         padding-left: 1rem;
-    }
+ }
 
     
-    .nav-toggle-label {
+.nav-toggle-label {
         display: none;
     }
 
@@ -142,6 +143,14 @@ main {
 
     /*make main take up space to push footer down*/
     flex: 1 0 auto;
+}
+
+.rules {
+    max-width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 /* Footer */
