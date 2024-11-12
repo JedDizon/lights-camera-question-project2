@@ -227,44 +227,44 @@ div strong {
 
 #action-adv {
     background: 
-    linear-gradient(rgba(0, 0, 0, 0.75),
-            rgba(0, 0, 0, 0.75)),
-    url('../images/pexels-thatguycraig000-3526022-act-adv.jpg') no-repeat top center / cover;
+    linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
+    url('../images/pexels-thatguycraig000-3526022-act-adv.jpg') no-repeat center center / cover;
 }
 
 #animation {
     background: 
-    linear-gradient(rgba(0, 0, 0, 0.75),
-            rgba(0, 0, 0, 0.75)),
-    url('../images/pexels-skitterphoto-42415-ani.jpg') no-repeat top center / cover;
+    linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
+    url('../images/pexels-skitterphoto-42415-ani.jpg') no-repeat center center / cover;
 }
 
 #romance {
     background: 
-    linear-gradient(rgba(0, 0, 0, 0.75),
-            rgba(0, 0, 0, 0.75)),
-    url('../images/pexels-cottonbro-6800202-rom.jpg') no-repeat top center / cover;
+    linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
+    url('../images/pexels-cottonbro-6800202-rom.jpg') no-repeat center center / cover;
 }
 
 #classics {
     background: 
-    linear-gradient(rgba(0, 0, 0, 0.75),
-            rgba(0, 0, 0, 0.75)),
-    url('../images/pexels-cottonbro-7266267-cla.jpg') no-repeat top center / cover;
+    linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
+    url('../images/pexels-cottonbro-7266267-cla.jpg') no-repeat center center / cover;
 }
 
 #horror {
     background: 
-    linear-gradient(rgba(0, 0, 0, 0.75),
-            rgba(0, 0, 0, 0.75)),
-    url('../images/pexels-introspectivedsgn-29116318-hor.jpg') no-repeat top center / cover;
+    linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
+    url('../images/pexels-introspectivedsgn-29116318-hor.jpg') no-repeat center center / cover;
 }
 
 #comedy {
     background: 
-    linear-gradient(rgba(0, 0, 0, 0.75),
-            rgba(0, 0, 0, 0.75)),
-    url('../images/pexels-atikmuhammed-20757289-com.jpg') no-repeat top center / cover;
+    linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
+    url('../images/pexels-atikmuhammed-20757289-com.jpg') no-repeat center center / cover;
 }
 
 
