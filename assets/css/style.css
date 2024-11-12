@@ -18,11 +18,17 @@ body {
     margin: 0;
     /*Generic project styles*/
     font-family: "cabin", sans-serif;
+    color: #EEEEEE;
+    min-height: 100vh;
 }
 
 a {
     text-decoration: none;
-    color: #00092C;
+    color: #EEEEEE;
+}
+
+h1 {
+    text-transform: uppercase;
 }
 
 h2,
@@ -30,14 +36,32 @@ h3 {
     margin: 0.5em auto;
     font-size: 110%;
     text-align: center;
+    text-transform: uppercase;
 }
 
 h2 {
     font-size: 180%;
 }
 
+div {
+    border: 2px solid #EEEEEE;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: #00092C;
+    margin: 2em;
+    
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+}
+
 p {
     text-align: justify;
+    line-height: 27px;
+}
+
+li {
     line-height: 27px;
 }
 
@@ -66,6 +90,7 @@ h1 {
     font-size: 110%;
 }
 
+
 #menu li {
     margin-bottom: 1em;
     background-color: #FF5F00;
@@ -76,29 +101,11 @@ h1 {
 }
 
 #menu a:hover {
-    border-bottom: 1px solid #00092C;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 .active {
-    border-bottom: 1px solid #00092C;
-}
-
-
-nav {
-    display: block;
-    position: relative;
-    box-shadow: none;
-    width: fit-content;
-    padding-right: 1rem;
-}
-
-
-#menu {
-    display: flex;
-}
-
-#menu>li {
-    padding-left: 1rem;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 #logo {
@@ -106,15 +113,83 @@ nav {
     margin: 0 0.3rem;
 }
 
+/*hide checkbox*/
+#nav-toggle {
+    display: none
+}
+
+/*Header*/
+nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+}
+
+#menu {
+        display: flex;
+   }
+
+#menu>li {
+        padding-left: 1rem;
+ }
+
+    
+.nav-toggle-label {
+        display: none;
+    }
+
+
 /* Main */
 main {
-    background-color: bisque;
+    background-color: #B20600;
     margin-top: 95px;
+
+    /*make main take up space to push footer down*/
+    flex: 1 0 auto;
+}
+
+.rules {
+    max-width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2em;
+}
+
+#genre-selector {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-evenly;
 }
 
 /* Footer */
 footer {
-    background-color: cadetblue;
+    background-color: #00092C;
+    width: 100%;
+
+}
+
+#social-networks {
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 150%;
+    padding: 5%;
+    color: #EEEEEE;
+}
+
+#social-networks a:hover {
+    color: #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 
@@ -133,24 +208,31 @@ footer {
         display: none;
         top: 100%;
     }
-
+    
     /*Checkbox pseudoclass*/
-    #nav-toggle:checked~nav {
-        display: block;
-    }
 
-    #nav-toggle {
-        display: none
-    }
-
-    .nav-toggle-label {
-        font-size: 2rem;
-    }
+#nav-toggle:checked~nav {
+    display: block;
 }
 
-@media screen and (min-width:786px) {
-    .nav-toggle-label {
-        display: none;
-
-    }
+.nav-toggle-label {
+    font-size: 2rem;
+    display: inline;
 }
+
+
+}
+
+
+@media screen and (max-width:520px) {
+    main {
+        margin-top: 170px;
+    }
+    }
+
+  
+@media screen and (max-width:350px) {
+    main {
+        margin-top: 250px;
+    }
+    }
