@@ -171,25 +171,33 @@ main {
 
 .genre {
     width: 40%;
+    text-align: center; 
+    min-height: 40vw;
     max-height: fit-content;
-    text-align: center;  
 }
 
 
 #action-adv {
     background: url('../images/pexels-thatguycraig000-3526022-act-adv.jpg') no-repeat top center / cover;
-    
-    /*height: 90vw;
-    width: 90vw;
-    margin-bottom: 20px;
-
-    /* Makes the square image into a circle */
-    /*
-    border-radius: 50%;
-    max-width: 300px;
-    max-height: 300px;
-    */
 }
+
+#animation {
+    background: url('../images/pexels-skitterphoto-42415-ani.jpg') no-repeat top center / cover;
+}
+
+#romance {
+    background: url('../images/pexels-cottonbro-6800202-rom.jpg') no-repeat top center / cover;
+}
+#classics {
+    background: url('../images/pexels-cottonbro-7266267-cla.jpg') no-repeat top center / cover;
+}
+#horror {
+    background: url('../images/pexels-introspectivedsgn-29116318-hor.jpg') no-repeat top center / cover;
+}
+#comedy {
+    background: url('../images/pexels-atikmuhammed-20757289-com.jpg') no-repeat top center / cover;
+}
+
 
 /* Footer */
 footer {
