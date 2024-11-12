@@ -162,9 +162,19 @@ main {
 #genre-selector {
     display: flex;
     flex-direction: row;
-    flex-flow: wrap;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: 2em;
+    max-width: 100%;
+    position: relative;
 }
+
+.genre {
+    width: 40%;
+    max-height: fit-content;
+    text-align: center;  
+}
+
 
 #action-adv {
     background: url('../images/pexels-thatguycraig000-3526022-act-adv.jpg') no-repeat top center / cover;
@@ -235,9 +245,15 @@ footer {
     display: inline;
 }
 
-
+#genre-selector {
+    max-width: 100%;
 }
 
+.genre {
+    width: 80%;
+}
+
+}
 
 @media screen and (max-width:520px) {
     main {
