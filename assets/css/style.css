@@ -166,6 +166,21 @@ main {
     justify-content: space-evenly;
 }
 
+#action-adv {
+    background: url('../images/pexels-thatguycraig000-3526022-act-adv.jpg') no-repeat top center / cover;
+    
+    /*height: 90vw;
+    width: 90vw;
+    margin-bottom: 20px;
+
+    /* Makes the square image into a circle */
+    /*
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+    */
+}
+
 /* Footer */
 footer {
     background-color: #00092C;
