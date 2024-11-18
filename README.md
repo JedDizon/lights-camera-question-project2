@@ -5,7 +5,7 @@ Welcome to <em> Lights, Camera, Question! </em>, the ultimate destination for fi
 
 ### Live link:
 
- Lights, Camera, Question! < LINK >
+ Lights, Camera, Question! < (https://jeddizon.github.io/lights-camera-question-project2/) >
 
 ![Website mockup]()
 
@@ -51,6 +51,7 @@ See below any additional features that I would like to implement:
 - Balsamiq: used to create wireframes of what the website was envisioned to look like.
 - Git: used for version control.
 - Github: used to host the website.
+- JavaScript: used to create the quiz functionaility, score updator, checking for correct answer.
 
 ---
 
@@ -65,6 +66,9 @@ See below any additional features that I would like to implement:
 
 
 ### Lighthouse testing
+
+
+### JSHint
 
 ---
 
@@ -113,7 +117,7 @@ This project was deployed on Github. The site to deploy can be read below:
 
 ### Live link:
 
- Lights, Camera, Question! < LINK >
+ Lights, Camera, Question! < https://jeddizon.github.io/lights-camera-question-project2/ >
 
 ---
 
@@ -123,7 +127,10 @@ This project was deployed on Github. The site to deploy can be read below:
 ### Content
 
 - Informative Content
-  
+  - Quiz questions
+    - Reader's Digest < https://www.rd.com/article/movie-trivia-facts/ >
+    - Water Cooler Trivia < https://www.watercoolertrivia.com/trivia-questions/movie-trivia-questions >
+    - Land of Trivia < https://landoftrivia.com/movie-trivia-questions/ >
 
 - Extra help 
   
