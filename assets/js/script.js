@@ -10,13 +10,33 @@ document.addEventListener("DOMContentLoaded", function(){
             if (this.getAttribute("type") === "submit") {
                 alert("You clicked an answer!");
                 console.log("You clicked a button");
-            } 
+            } else {
+                
+            }
         })
     }
+
+    /**Check what genre to load relevant qs */
+    let gameElement = document.getElementById("question");
+    let gameType = gameElement.getAttribute("data-type"); 
+    document.onload = runGame(gameType);
+
 })
 
-function runGame() {
-
+/**
+ * The main game loop, called when the script is first loaded
+ * and after the user's answer has been processed
+ */
+function runGame(gameType) {
+    if (gameType === "actadvgame") {
+        displayActAdvQuestions(
+            //input question
+            console.log("Test if working")
+            )
+    }  else {
+        alert(`Unknown game type: ${gameType}`);
+        throw `Unknown game type: ${gameType} aborting`;
+    }
 }
 
 
