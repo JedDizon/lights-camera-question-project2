@@ -31,7 +31,9 @@ function runGame(gameType) {
         displayActAdvQuestions(
             //input question
             console.log("Test if working"),
-            console.log(questionsForQuiz)
+            console.log(questionsForQuiz),
+            console.log(incorrectansForQuiz),
+            console.log(correctansForQuiz),
             )
     }  
     else {
