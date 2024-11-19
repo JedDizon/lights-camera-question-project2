@@ -3,8 +3,17 @@
 
 document.addEventListener("DOMContentLoaded", function(){
     let buttons = document.getElementsByTagName("button");
-})
 
+    for (let button of buttons) {
+        //as the button is clicked, the code inside will run
+        button.addEventListener("click", function(){
+            if (this.getAttribute("type") === "submit") {
+                alert("You clicked an answer!");
+                console.log("You clicked a button");
+            } 
+        })
+    }
+})
 
 function runGame() {
 
