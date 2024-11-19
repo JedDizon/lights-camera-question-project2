@@ -268,6 +268,31 @@ div strong {
 }
 
 
+/*Quiz page*/
+/*
+#game-area {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+*/
+
+.choices-area {
+    max-width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 2em;
+}
+
+.choice-answers {
+    margin: 2em;
+}
+
+
 /* Footer */
 footer {
     background-color: #00092C;
