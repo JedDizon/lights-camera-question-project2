@@ -75,3 +75,8 @@ let actadvQs = [
  incorrectans: ['Quentin Tarantino', 'Christopher Nolan', 'Chad Stahelski'],
 },
 ];
+
+let questionsForQuiz = [];
+for (let i = 0; i < actadvQs.length; i++) {
+   questionsForQuiz.push(actadvQs[i].question);
+}

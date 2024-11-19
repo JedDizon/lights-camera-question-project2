@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function(){
     let gameElement = document.getElementById("question");
     let gameType = gameElement.getAttribute("data-type"); 
     document.onload = runGame(gameType);
-
 })
 
 /**
@@ -31,9 +30,11 @@ function runGame(gameType) {
     if (gameType === "actadvgame") {
         displayActAdvQuestions(
             //input question
-            console.log("Test if working")
+            console.log("Test if working"),
+            console.log(questionsForQuiz)
             )
-    }  else {
+    }  
+    else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType} aborting`;
     }
