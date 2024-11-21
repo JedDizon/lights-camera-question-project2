@@ -28,7 +28,7 @@ Quiz drop down
 Footer social media
 Player score tracker
 
-### Features Left to Implement
+### Future Features
 
 See below any additional features that I would like to implement:
 
