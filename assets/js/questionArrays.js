@@ -1,4 +1,4 @@
-let actadvQs = [
+const actadvQs = [
    {
     question: 'In Indiana Jones and the Last Crusade, who plays Indiana Jones’ father?',
     answers: [
@@ -135,7 +135,7 @@ let actadvQs = [
 }
 ];
 
-let aniQs = [
+const aniQs = [
   {
     question: 'In The Lion King, what is the name of Simba’s evil uncle?',
     answers: [
@@ -273,7 +273,7 @@ let aniQs = [
 }
 ];
 
-let claQs = [
+const claQs = [
   {
     question: 'In Casablanca, what song does Sam play that holds special meaning for Rick and Ilsa?',
     answers: [
@@ -411,7 +411,7 @@ let claQs = [
 }
 ];
 
-let comQs = [
+const comQs = [
   {
     question: 'In Dumb and Dumber, what are the names of the two main characters played by Jim Carrey and Jeff Daniels?',
     answers: [
@@ -549,7 +549,7 @@ let comQs = [
 }
 ];
 
-let horQs = [
+const horQs = [
   {
     question: 'In Halloween (1978), what is the name of the masked killer?',
     answers: [
@@ -687,7 +687,7 @@ let horQs = [
 }
 ];
 
-let romQs = [
+const romQs = [
   {
     question: 'In The Notebook, what is the name of the character played by Ryan Gosling?',
     answers: [

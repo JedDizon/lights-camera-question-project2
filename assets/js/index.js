@@ -20,6 +20,8 @@ function startGame() {
     // Show the game area
     gameArea.classList.remove("hidden");
 
+    setNextQuestion();
+
 }
 
 function setNextQuestion() {
