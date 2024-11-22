@@ -61,6 +61,30 @@ function resetState() {
   }
 }
 
+
+//Select answer - check if correct or wrong via true/false
 function selectAnswer(e) {
   console.log("Answer selected");
+  const selectedButton = e.target;
+  const correct = selectedButton.dataset.correct;
+  setStatusClass(document.body, correct);
+  Array.from(answerButtonsElement.children).forEach(button => {
+    setStatusClass(button, button.dataset.correct);
+  });
+}
+
+function setStatusClass(element, correct) {
+  clearStatusClass(element);
+  if (correct) {
+    console.log("Correct answer");
+    alert("Correct answer");
+  } else {
+    console.log("Wrong answer");
+    alert("Wrong answer");
+  }
+}
+
+function clearStatusClass(element) {
+  element.classList.remove("correct");
+  element.classList.remove("wrong");
 }
