@@ -102,12 +102,17 @@ function displayQuestions(gameType) {
      * Choose genre questions
      * */
         if (gameType === "actadvgame") {
-            console.log("Act/Adv game selected");
+            console.log("Action Adventure quiz selected");
             console.log(questionSet);
             //Display the first question
             displayActAdvQuestions();
         }  
-        else {
+        else if (gameType === "animgame") {
+            console.log("Animation quiz selected");
+            console.log(questionSet);
+            //Display the first question
+            displayActAdvQuestions();
+        } else {
             alert(`Unknown game type: ${gameType}`);
             throw `Unknown game type: ${gameType} aborting`;
         }
@@ -127,9 +132,15 @@ function displayQuestions(gameType) {
 
 //Display questions functions
 function displayActAdvQuestions() {
-    console.log("Displaying Act/Adv questions");
+    console.log("Displaying Action/Adventure questions");
     
 }
+
+function displayAniQuestions() {
+    console.log("Displaying Animation questions");
+
+}
+
 
 
 //event listeners on buttons (click) --> calls check answer function
