@@ -83,7 +83,7 @@
                         Perfect for fans of heart-pounding moments and daring escapades, 
                         this quiz covers everything from iconic action classics to the latest adventures!
                         <br><br>
-                        <button data-type="actadvgame" class="btn genre-btn">
+                        <button data-type="actadvgame" class="btn genre-btn" id="start-btn">
                             <strong>Click here to start!</strong>
                         </button>
                     </p>
@@ -166,15 +166,19 @@
             </div>
 
         </section>
-        <section id="gamearea" class="hidden">
-            <div class="question-area" id="question-area">
-                <p id="question">Question X</p>
+        <section id="gamearea" class="container hidden">
+            <div class="question-area" id="question">
+                Question
             </div>
-            <div class="choices-area" id="choices-area">
+            <div class="answer-area" id="answer-buttons">
                 <button type="submit" data-type="choice1" class="choice-answers c1">A</button>
                 <button type="submit" data-type="choice2" class="choice-answers c2">B</button>
                 <button type="submit" data-type="choice3" class="choice-answers c3">C</button>
                 <button type="submit" data-type="choice4" class="choice-answers c4">D</button>
+            </div>
+            <div class="controls">
+                <button id="restart-button" class="btn restart-btn" id="restart-btn">Restart Quiz</button>
+                <button id="next-button" class="btn next-btn" id="next-btn">Next Question</button>
             </div>
 
             <div class="player-score-div">
@@ -219,7 +223,7 @@
 
     </footer>
     <script src="assets/js/questionArrays.js"></script>
-    <script src="assets/js/script.js"></script>
+    <!--<script src="assets/js/script.js"></script> -->
     <script src="assets/js/index.js"></script>
 </body>
 
