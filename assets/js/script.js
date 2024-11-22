@@ -16,13 +16,15 @@ let correctScore = 0;
 let questionSet = []; //array of questions from questionArray.js
 let startButtons = document.getElementsByClassName("genre-btn");
 let gameArea = document.getElementById("gamearea");
+const questionElement = document.getElementById("question");
+const answerButtonsElement = document.getElementsByClassName("choice-answers");
 
 /**
  * For loop to start the game (ChatGPT)
  */
 for (let button of startButtons) {
     button.addEventListener("click", function() {
-        startGame(button);  
+        startGame(button); 
     });
 }
 
@@ -82,23 +84,52 @@ function startGame(button) {
     // Show the game area
     gameArea.classList.remove("hidden");
 
-    /** 
-     * Choose genre questions
-     * */
-    if (gameType === "actadvgame") {
-        
-    }  
-    else {
-        alert(`Unknown game type: ${gameType}`);
-        throw `Unknown game type: ${gameType} aborting`;
-    }
-         
+    //update question and game area class with relevant genre
+    gameArea.classList.add(gameType);
+
+    //Display questions
+    displayQuestions(gameType);
+
+    //start at first question
+    currentQuestionIndex = 0;         
 }
 
 
 //display question function 
+function displayQuestions(gameType) {
+
+        /** 
+     * Choose genre questions
+     * */
+        if (gameType === "actadvgame") {
+            console.log("Act/Adv game selected");
+            console.log(questionSet);
+            //Display the first question
+            displayActAdvQuestions();
+        }  
+        else {
+            alert(`Unknown game type: ${gameType}`);
+            throw `Unknown game type: ${gameType} aborting`;
+        }
+
+    /**
+    //Get the questions for the selected genre
+    questionSet = getQuestions(gameType);
+    console.log(questionSet);
+    //Display the first question
+    showQuestion();
+     */
+
+}
 //do i have any qs to display (check value of current question)/ if current q > questionset.length, call game over.
 //populate question set to dom
+
+
+//Display questions functions
+function displayActAdvQuestions() {
+    console.log("Displaying Act/Adv questions");
+    
+}
 
 
 //event listeners on buttons (click) --> calls check answer function
