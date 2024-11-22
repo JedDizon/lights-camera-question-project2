@@ -824,28 +824,3 @@ let romQs = [
     ]
 }
 ];
-
-let questionsForQuiz = [];
-for (let i = 0; i < actadvQs.length; i++) {
-   questionsForQuiz.push(actadvQs[i].question);
-}
-
-/*
-let incorrectansForQuiz = [];
-for (let i = 0; i < actadvQs.length; i++) {
-    let incorrectansarray = [];
-    for (let j = 0; j < actadvQs[i].incorrectans.length; j++) {
-        incorrectansarray.push(actadvQs[i].incorrectans[j]);
-    }
-    incorrectansForQuiz.push(incorrectansarray);
-}*/
-
-let incorrectansForQuiz = [];
-for (let i = 0; i < actadvQs.length; i++) {
-    incorrectansForQuiz.push(actadvQs[i].incorrectans);
-}
-
-let correctansForQuiz = [];
-for (let i = 0; i < actadvQs.length; i++) {
-    correctansForQuiz.push(actadvQs[i].correctans);
-}
