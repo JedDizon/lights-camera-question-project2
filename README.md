@@ -83,6 +83,10 @@ See below any additional features that I would like to implement:
 
 ## Bugs 
 
+Can't get all buttons to start the game with the class of "genre-btn"
+Had  startGame(this) instead of startGame(button)
+
+
 ### index (Home)
 
 

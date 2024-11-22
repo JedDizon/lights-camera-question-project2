@@ -14,7 +14,17 @@ let score = 0;
 let incorrectScore = 0;
 let correctScore = 0;
 let questionSet = []; //array of questions from questionArray.js
-let genreButton = document.getElementById("genre-btn");
+let startButtons = document.getElementsByClassName("genre-btn");
+
+
+/**
+ * For loop to start the game (ChatGPT)
+ */
+for (let button of startButtons) {
+    button.addEventListener("click", function() {
+        startGame(button);  
+    });
+}
 
 
 //Plan
@@ -27,12 +37,11 @@ let genreButton = document.getElementById("genre-btn");
 //5. **Create a function that will increment the incorrect score
 //6. **Create a function that will increment the correct score
 
-
-
+//7. Create a function that will display the final score
 
 // Wait for DOM to finish loading before running the game
 // Get the button elements and add event listeners
-
+/**
 document.addEventListener("DOMContentLoaded", function(){
     let buttons = document.getElementsByTagName("button");
     let genreButton = document.getElementById("genre-btn");
@@ -49,13 +58,17 @@ document.addEventListener("DOMContentLoaded", function(){
         });
     }
 })
+     */
 
 
 /**
  * The main game loop
  */
-function startGame(gameType) {
-    console.log("Starting game...");
+function startGame(button) {
+    let gameType = button.getAttribute("data-type");
+    console.log("Starting game for: " + gameType);
+
+    /**
     if (gameType === "actadvgame") {
         displayActAdvQuestions(
             //input question (set qs, score to zero)
@@ -69,7 +82,9 @@ function startGame(gameType) {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType} aborting`;
     }
+         */
 }
+
 
 //display question function 
 //do i have any qs to display (check value of current question)/ if current q > questionset.length, call game over.
