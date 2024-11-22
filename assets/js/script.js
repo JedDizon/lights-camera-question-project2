@@ -135,6 +135,7 @@ function displayQuestions(gameType) {
 let questionElement = document.getElementById("question-area");
 let answersElement = document.getElementById("choices-area");
 
+/**
 //Display questions functions
 function displayActAdvQuestions() {
     console.log("Displaying Action/Adventure questions");
@@ -144,6 +145,39 @@ function displayActAdvQuestions() {
     answersElement.innerHTML = '';
     // Display the question
     questionElement.textContent = actadvQs[0].question;
+
+}
+*/
+
+function displayActAdvQuestions() {
+    console.log("Displaying Action/Adventure questions");
+
+    // Clear any previous answers (if the function is called again)
+    answersElement.innerHTML = '';
+
+    // Get the current question object from the actadvQs array
+    const currentQuestion = actadvQs[currentQuestion];
+
+    // Display the question
+    questionElement.textContent = currentQuestion.question;
+
+    // Display the answers as buttons
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
+
+        // If the answer is correct, mark it in the button's data
+        if (answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+
+        // Add an event listener to handle answer selection
+        button.addEventListener('click', selectAnswer);
+
+        // Append the button to the answers element
+        answersElement.appendChild(button);
+    });
 }
 
 function displayAniQuestions() {
@@ -161,5 +195,4 @@ function checkAnswer(e) {
     //if not, display incorrect
     //then calls display question function.
 }
-
 
