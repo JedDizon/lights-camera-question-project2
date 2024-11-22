@@ -8,6 +8,15 @@
  * function to run/start game (set game up)
  */
 
+//Global Variables
+let currentQuestion = 0;
+let score = 0;
+let questionSet = 0;
+let questionsForQuiz = [];
+let incorrectansForQuiz = [];
+let correctansForQuiz = [];
+
+
 // Wait for DOM to finish loading before running the game
 // Get the button elements and add event listeners
 
