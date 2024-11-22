@@ -16,8 +16,9 @@ let correctScore = 0;
 let questionSet = []; //array of questions from questionArray.js
 let startButtons = document.getElementsByClassName("genre-btn");
 let gameArea = document.getElementById("gamearea");
-const questionElement = document.getElementById("question");
-const answerButtonsElement = document.getElementsByClassName("choice-answers");
+
+//const questionElement = document.getElementById("question");
+//const answerButtonsElement = document.getElementsByClassName("choice-answers");
 
 /**
  * For loop to start the game (ChatGPT)
@@ -130,10 +131,19 @@ function displayQuestions(gameType) {
 //populate question set to dom
 
 
+// Get the question element and answers container
+let questionElement = document.getElementById("question-area");
+let answersElement = document.getElementById("choices-area");
+
 //Display questions functions
 function displayActAdvQuestions() {
     console.log("Displaying Action/Adventure questions");
     
+    //chatGPT Code
+    // Clear any previous answers (if the function is called again)
+    answersElement.innerHTML = '';
+    // Display the question
+    questionElement.textContent = actadvQs[0].question;
 }
 
 function displayAniQuestions() {
