@@ -40,7 +40,7 @@
 
         <nav>
             <ul id="menu">
-                <li><a href="index.html" aria-label="Go to Home page and choose a quiz to play" class="active">Home</a>
+                <li><a href="index.html" aria-label="Reset Home page and choose a quiz to play" class="active">Home</a>
                 </li>
             </ul>
         </nav>
@@ -76,16 +76,17 @@
 
             
             <div class="genre" id="action-adv">
-                <a href="actadv.html" aria-label="Go to action adventure quiz questions">
+            
                     <h3>Action / Adventure</h3>
                     <p>Dive into the high-stakes world of action and adventure with this quiz, 
                         where you’ll test your knowledge of thrilling chases, epic battles, and unforgettable heroes. 
                         Perfect for fans of heart-pounding moments and daring escapades, 
                         this quiz covers everything from iconic action classics to the latest adventures!
                         <br><br>
-                        <strong>Click here to start!</strong>
+                        <button><strong>Click here to start!</strong></button>
+                       
                     </p>
-                </a>
+                
             </div>
 
             <div class="genre" id="animation">
@@ -155,6 +156,22 @@
             </div>
 
         </section>
+        <section id="game-area" class="hidden">
+            <div class="question-area">
+                <p id="question" data-type="actadvgame">Question X</p>
+            </div>
+            <div class="choices-area">
+                <button type="submit" data-type="choice1" class="choice-answers c1">A</button>
+                <button type="submit" data-type="choice2" class="choice-answers c2">B</button>
+                <button type="submit" data-type="choice3" class="choice-answers c3">C</button>
+                <button type="submit" data-type="choice4" class="choice-answers c4">D</button>
+            </div>
+
+            <div class="player-score-div">
+                <p class="player-score">Player Score: <span class="score-numer">0</span> </p>
+            </div>
+        </section>
+
     </main>
 
     <!--Footer-->
@@ -191,6 +208,7 @@
         <script src="https://kit.fontawesome.com/03775ef499.js" crossorigin="anonymous"></script>
 
     </footer>
+    <script src="assets/js/questionArrays.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 

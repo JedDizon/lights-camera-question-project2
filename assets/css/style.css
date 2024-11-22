@@ -65,6 +65,11 @@ li {
     line-height: 27px;
 }
 
+/*Hide quiz area until genre is chosen*/
+.hidden {
+    display: none;
+}
+
 /* Header */
 header {
     background-color: #FF5F00;

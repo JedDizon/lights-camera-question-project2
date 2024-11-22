@@ -11,10 +11,22 @@
 //Global Variables
 let currentQuestion = 0;
 let score = 0;
-let questionSet = 0;
+let questionSet = gameType;
 let questionsForQuiz = [];
 let incorrectansForQuiz = [];
 let correctansForQuiz = [];
+
+
+//Plan
+//1. Create a function that will run/start the game
+//2. Create a function that will display the questions for each genre
+//3. Create a function that will check the answers
+//4. Create a function that will increment the score
+
+//5. **Create a function that will increment the incorrect score
+//6. **Create a function that will increment the correct score
+
+
 
 
 // Wait for DOM to finish loading before running the game
@@ -42,11 +54,9 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 /**
- * The main game loop, called when the script is first loaded
- * and after the user's answer has been processed
+ * The main game loop
  */
 function runGame(gameType) {
-    questionSet = gameType;
     if (gameType === "actadvgame") {
         displayActAdvQuestions(
             //input question (set qs, score to zero)
