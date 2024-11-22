@@ -15,7 +15,7 @@ let incorrectScore = 0;
 let correctScore = 0;
 let questionSet = []; //array of questions from questionArray.js
 let startButtons = document.getElementsByClassName("genre-btn");
-
+let gameArea = document.getElementById("gamearea");
 
 /**
  * For loop to start the game (ChatGPT)
@@ -63,26 +63,36 @@ document.addEventListener("DOMContentLoaded", function(){
 
 /**
  * The main game loop
+ * Starts game for the selected genre and loads relevant questions
  */
 function startGame(button) {
     let gameType = button.getAttribute("data-type");
     console.log("Starting game for: " + gameType);
 
-    /**
+    //Remove intro, rules, genre selector sections
+    const introSectionRemoval = document.getElementById("intro");
+    introSectionRemoval.remove();
+
+    const rulesSectionRemoval = document.getElementById("rules");
+    rulesSectionRemoval.remove();
+    
+    const genreSelectorRemoval = document.getElementById("genre-selector");
+    genreSelectorRemoval.remove();
+
+    // Show the game area
+    gameArea.classList.remove("hidden");
+
+    /** 
+     * Choose genre questions
+     * */
     if (gameType === "actadvgame") {
-        displayActAdvQuestions(
-            //input question (set qs, score to zero)
-            console.log("Test if working"),
-            console.log(questionsForQuiz),
-            console.log(incorrectansForQuiz),
-            console.log(correctansForQuiz),
-            )
+        
     }  
     else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType} aborting`;
     }
-         */
+         
 }
 
 
