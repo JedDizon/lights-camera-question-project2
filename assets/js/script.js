@@ -18,6 +18,7 @@ let correctansForQuiz = [];
 
 
 //Plan
+//1. Create a function to choose genre
 //1. Create a function that will run/start the game
 //2. Create a function that will display the questions for each genre
 //3. Create a function that will check the answers
@@ -52,6 +53,48 @@ document.addEventListener("DOMContentLoaded", function(){
     let gameType = gameElement.getAttribute("data-type"); 
     document.onload = runGame(gameType);
 })
+
+/**
+ * Choose genre function
+ */
+function chooseGenre() {
+    //Check what genre user choses
+    let genre = prompt("Please choose a genre: Action/Adventure, Horror, Animation, Comedy, Classic, Romance");
+    if (genre === "Action/Adventure") {
+        return "actadvgame";
+    } else if (genre === "Horror") {
+        return "horgame";
+    } else if (genre === "Animation") {
+        return "anigame";
+    } else if (genre === "Comedy") {
+        return "comgame";
+    } else if (genre === "Classic") {
+        return "clagame";
+    } else if (genre === "Romance") {
+        return "romgame";
+    } else {
+        alert("Please choose a valid genre");
+        return chooseGenre();
+    }
+
+
+
+
+        //checks for addition game type
+        if (gameType === 'addition') {
+            displayAdditionQuestion(num1, num2);
+        } else if (gameType === 'multiply') {
+            displayMultiplyQuestion(num1, num2);
+        } else if (gameType === 'subtract') {
+            displaySubtractQuestion(num1, num2);
+        } else if (gameType === 'division') {
+            displayDivideQuestion(num3, num1);
+        } else {
+            alert(`Unknown game type: ${gameType}`);
+            throw `Unknown game type: ${gameType}. Aborting!`;
+        }
+}
+
 
 /**
  * The main game loop
