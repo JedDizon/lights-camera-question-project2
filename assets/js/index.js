@@ -60,7 +60,6 @@ function showQuestion(question) {
 }
 
 function resetState() {
-  //nextButton.classList.add("hidden");
   clearStatusClass(document.body);
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
@@ -84,24 +83,17 @@ function selectAnswer(e) {
     alert("Incorrect :( Better luck next time!");
   };
 
-
-  /**
-  const selectedButton = e.target;
-  const correct = selectedButton.dataset.correct;
-  setStatusClass(document.body, correct);
-  Array.from(answerButtonsElement.children).forEach(button => {
-    setStatusClass(button, button.dataset.correct);
-  });
+  //Check if there are more questions
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     setNextQuestion();
   } else {
     console.log("Game over");
-    restartButton.innerText = "Restart";
-    //nextButton.classList.remove("hidden");
-  }
-     */
-}
+    restartButton.classList.remove("hidden");
 
+  }}
+
+
+  
 function setStatusClass(element, correct) {
   clearStatusClass(element);
   if (correct) {
@@ -117,3 +109,4 @@ function clearStatusClass(element) {
   element.classList.remove("correct");
   element.classList.remove("wrong");
 }
+  

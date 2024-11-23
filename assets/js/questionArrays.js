@@ -7,7 +7,9 @@ const actadvQs = [
       { text: 'Harrison Ford', correct: false },
       { text: 'Anthony Hopkins', correct: false }
    ]
-  }, {
+  }, 
+  /*
+  {
     question: 'What is the name of the island where Jurassic Park is located?',
     answers: [
         { text: 'Isla Nublar', correct: true },
@@ -133,6 +135,7 @@ const actadvQs = [
         { text: 'Chad Stahelski', correct: false }
     ]
 }
+    */
 ];
 
 const aniQs = [
