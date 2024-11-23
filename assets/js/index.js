@@ -4,9 +4,14 @@ const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 
 const startButton = document.getElementById("start-btn");
+const restartButton = document.getElementById("restart-btn");
 const nextButton = document.getElementById("next-btn");
 startButton.addEventListener("click", startGame);
-
+restartButton.addEventListener("click", startGame);
+nextButton.addEventListener("click", () => {
+  currentQuestionIndex++;
+  setNextQuestion();
+});
 
 function startGame() {
     console.log("Game started");
@@ -56,6 +61,7 @@ function showQuestion(question) {
 
 function resetState() {
   //nextButton.classList.add("hidden");
+  clearStatusClass(document.body);
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
@@ -65,22 +71,45 @@ function resetState() {
 //Select answer - check if correct or wrong via true/false
 function selectAnswer(e) {
   console.log("Answer selected");
+
+  //check if answer is correct
+  const selectedButton = e.target;
+  const correct = selectedButton.dataset.correct;
+
+  if (correct) {
+    console.log("Correct answer");
+    alert("You got the Correct answer. Well done!");
+  } else {  
+    console.log("Wrong answer");
+    alert("Incorrect :( Better luck next time!");
+  };
+
+
+  /**
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
   setStatusClass(document.body, correct);
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct);
   });
+  if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    setNextQuestion();
+  } else {
+    console.log("Game over");
+    restartButton.innerText = "Restart";
+    //nextButton.classList.remove("hidden");
+  }
+     */
 }
 
 function setStatusClass(element, correct) {
   clearStatusClass(element);
   if (correct) {
     console.log("Correct answer");
-    alert("Correct answer");
+    element.classList.add("correct");
   } else {
     console.log("Wrong answer");
-    alert("Wrong answer");
+    element.classList.add("wrong");
   }
 }
 
