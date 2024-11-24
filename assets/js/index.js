@@ -8,7 +8,9 @@ const restartButton = document.getElementById("restart-btn");
 const nextButton = document.getElementById("next-btn");
 startButton.addEventListener("click", startGame);
 restartButton.addEventListener("click", startGame);
+
 nextButton.addEventListener("click", () => {
+  console.log("Next button selected");
   currentQuestionIndex++;
   setNextQuestion();
 });
