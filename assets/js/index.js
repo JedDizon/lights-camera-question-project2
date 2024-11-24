@@ -61,6 +61,8 @@ function setNextQuestion() {
     return;
   }
 
+  // Reset the flag for following questions
+  isAnswerSelected = false; 
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
   
