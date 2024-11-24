@@ -18,9 +18,24 @@ document.getElementById("action-btn").addEventListener("click", () => {
 document.getElementById("animation-btn").addEventListener("click", () => {
   loadQuestions("aniQs");
 });
+document.getElementById("romance-btn").addEventListener("click", () => {
+  loadQuestions("romQs");
+});
+document.getElementById("classics-btn").addEventListener("click", () => {
+  loadQuestions("claQs");
+});
+document.getElementById("horror-btn").addEventListener("click", () => {
+  loadQuestions("horQs");
+});
+document.getElementById("comedy-btn").addEventListener("click", () => {
+  loadQuestions("comQs");
+});
 
-//Load different questions
+
+//Load questions
 function loadQuestions(category) {
+
+  //Remove intro, rules, genre selector sections
   const introSectionRemoval = document.getElementById("intro");
   const rulesSectionRemoval = document.getElementById("rules");
   const genreSelectorRemoval = document.getElementById("genre-selector");
@@ -32,7 +47,7 @@ function loadQuestions(category) {
   // Show the game area
   gameArea.classList.remove("hidden");
 
-  // Shuffle and load questions for the selected category
+  // Shuffle and load questions
   shuffledQuestions = questionSets[category].sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
 
@@ -58,33 +73,6 @@ nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
   setNextQuestion();
 });
-
-/*
-function startGame() {
-    console.log("Game started");
-
-    //Remove intro, rules, genre selector sections
-    const introSectionRemoval = document.getElementById("intro");
-    introSectionRemoval.remove();
-
-    const rulesSectionRemoval = document.getElementById("rules");
-    rulesSectionRemoval.remove();
-    
-    const genreSelectorRemoval = document.getElementById("genre-selector");
-    genreSelectorRemoval.remove();
-
-    // Show the game area
-    gameArea.classList.remove("hidden");
-
-    //Shuffled question
-    shuffledQuestions = actadvQs.sort(() => Math.random() - .5);
-    currentQuestionIndex = 0;
-
-    //Upload question
-    setNextQuestion();
-
-}
-*/
 
 function setNextQuestion() {
   console.log("Next question");
