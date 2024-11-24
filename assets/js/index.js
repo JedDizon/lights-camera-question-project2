@@ -1,8 +1,10 @@
+document.addEventListener("DOMContentLoaded", () => {
 let gameArea = document.getElementById("gamearea");
 let shuffledQuestions, currentQuestionIndex;
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 
+const controlsArea = document.getElementById("controls");
 const startButton = document.getElementById("start-btn");
 const restartButton = document.getElementById("restart-btn");
 const nextButton = document.getElementById("next-btn");
@@ -109,9 +111,13 @@ function setStatusClass(element, correct) {
   if (correct) {
     console.log("Correct answer");
     element.classList.add("correct");
+    controlsArea.classList.remove("hidden");
+    nextButton.classList.remove("hidden");
   } else {
     console.log("Wrong answer");
     element.classList.add("wrong");
+    controlsArea.classList.remove("hidden");
+    nextButton.classList.remove("hidden");
   }
 }
 
@@ -119,3 +125,4 @@ function clearStatusClass(element) {
   element.classList.remove("correct");
   element.classList.remove("wrong");
 }
+})
