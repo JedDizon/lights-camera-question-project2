@@ -88,7 +88,6 @@ function showQuestion(question) {
 
 function resetState() {
   //nextButton.classList.add("hidden");
-  clearStatusClass(document.body);
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
@@ -122,46 +121,17 @@ function selectAnswer(e) {
   if (correct) {
     console.log("Correct answer");
     alert("You got the Correct answer. Well done!");
+    incrementScore();
   } else {  
     console.log("Wrong answer");
     alert("Incorrect :( Better luck next time!");
   };
-
-
-  /**
-  const selectedButton = e.target;
-  const correct = selectedButton.dataset.correct;
-  setStatusClass(document.body, correct);
-  Array.from(answerButtonsElement.children).forEach(button => {
-    setStatusClass(button, button.dataset.correct);
-  });
-  if (shuffledQuestions.length > currentQuestionIndex + 1) {
-    setNextQuestion();
-  } else {
-    console.log("Game over");
-    restartButton.innerText = "Restart";
-    //nextButton.classList.remove("hidden");
-  }
-     */
 }
 
-function setStatusClass(element, correct) {
-  clearStatusClass(element);
-  if (correct) {
-    console.log("Correct answer");
-    element.classList.add("correct");
-    controlsArea.classList.remove("hidden");
-    nextButton.classList.remove("hidden");
-  } else {
-    console.log("Wrong answer");
-    element.classList.add("wrong");
-    controlsArea.classList.remove("hidden");
-    nextButton.classList.remove("hidden");
-  }
+//function to increment score
+function incrementScore() {
+  let oldScore = parseInt(document.getElementById('score').innerText);
+  document.getElementById('score').innerText = oldScore + 100;
 }
 
-function clearStatusClass(element) {
-  element.classList.remove("correct");
-  element.classList.remove("wrong");
-}
 })
