@@ -112,6 +112,9 @@ function resetState() {
 function endGame() {
   console.log("Game Over");
 
+  let totalScore = document.getElementById('score').innerText;
+console.log("Total Score: " + totalScore);
+
   // Clear the game area
   //questionElement.innerText = "Quiz Completed!";
 
@@ -121,7 +124,7 @@ function endGame() {
 
   // Show final score and pass/fail result
    let resultMessage = scorePercentage >= passPercentage ? "You passed the quiz!" : "You failed the quiz. Better luck next time!";
-   questionElement.innerText = `Quiz Completed! ${resultMessage} Your score is ${scorePercentage.toFixed(2)}%`;
+   questionElement.innerText = `Quiz Completed! ${resultMessage} You got ${scorePercentage.toFixed(2)}% with a score of ${totalScore}!`;
 
 
   // Hide answer and next button
