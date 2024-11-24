@@ -50,7 +50,14 @@ function setNextQuestion() {
 
 
 function showQuestion(question) {
+
+  // Shuffle the answers before displaying them
+  const shuffledAnswers = shuffle(question.answers);
+
+  //Display question text
   questionElement.innerText = question.question;
+
+  //create buttons for each answer
   question.answers.forEach(answer => {
     const button = document.createElement("button");
     button.innerText = answer.text;
@@ -61,7 +68,13 @@ function showQuestion(question) {
     button.addEventListener("click", selectAnswer);
     answerButtonsElement.appendChild(button);
   });
+
 }
+
+  //ensure the order of the answers changes each time a question is shown (CHATGPT)
+  function shuffle(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
 
 function resetState() {
   //nextButton.classList.add("hidden");
