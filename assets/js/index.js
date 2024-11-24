@@ -12,7 +12,15 @@ const nextButton = document.getElementById("next-btn");
 startButton.addEventListener("click", startGame);
 restartButton.addEventListener("click", startGame);
 
+//Track if answer is selected
+let isAnswerSelected = false;
+
 nextButton.addEventListener("click", () => {
+  
+  if (!isAnswerSelected) {
+    alert("Please select an answer before proceeding!");
+    return;
+  }
   console.log("Next button selected");
   currentQuestionIndex++;
   setNextQuestion();
@@ -113,6 +121,9 @@ function endGame() {
 //Select answer - check if correct or wrong via true/false
 function selectAnswer(e) {
   console.log("Answer selected");
+
+  // Mark that an answer has been selected
+  isAnswerSelected = true;
 
   //check if answer is correct
   const selectedButton = e.target;
