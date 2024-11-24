@@ -9,6 +9,7 @@ const answerArea = document.getElementById("answer-buttons");
 const startButton = document.getElementById("start-btn");
 const restartButton = document.getElementById("restart-btn");
 const nextButton = document.getElementById("next-btn");
+
 startButton.addEventListener("click", startGame);
 restartButton.addEventListener("click", startGame);
 
@@ -117,7 +118,7 @@ function endGame() {
   // Add a paragraph to return to home
   const homeLink = document.createElement("p");
   homeLink.innerHTML = 
-  '<a href="index.html" aria-label="Go to Home page and choose from the selection of quizzes" class="btn return-link">Click here to return to Homepage</a> <br> <p> or click the restart button to try again. </p>';
+  `<a href="index.html" aria-label="Go to Home page and choose from the selection of quizzes" class="btn return-link">Click here to return to Homepage</a> `;
   controlsArea.appendChild(homeLink);
 }
 
