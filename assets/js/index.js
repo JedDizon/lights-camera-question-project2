@@ -16,10 +16,14 @@ restartButton.addEventListener("click", startGame);
 //Track if answer is selected
 let isAnswerSelected = false;
 
+// Variable to track correct answers count
+let correctAnswersCount = 0; 
+
+
 nextButton.addEventListener("click", () => {
   
   if (!isAnswerSelected) {
-    alert("Please select an answer before proceeding!");
+    alert("Please select an answer first!");
     return;
   }
   console.log("Next button selected");
@@ -109,7 +113,16 @@ function endGame() {
   console.log("Game Over");
 
   // Clear the game area
-  questionElement.innerText = "Quiz Completed!";
+  //questionElement.innerText = "Quiz Completed!";
+
+  // Calculate score percentage and determine pass/fail (ChatGPT)
+   let passPercentage = 60; // Set pass percentage to 60%
+   let scorePercentage = (correctAnswersCount / 10) * 100;
+
+  // Show final score and pass/fail result
+   let resultMessage = scorePercentage >= passPercentage ? "You passed the quiz!" : "You failed the quiz. Better luck next time!";
+   questionElement.innerText = `Quiz Completed! ${resultMessage} Your score is ${scorePercentage.toFixed(2)}%`;
+
 
   // Hide answer and next button
   nextButton.classList.add("hidden");
@@ -137,9 +150,11 @@ function selectAnswer(e) {
     console.log("Correct answer");
     alert("You got the Correct answer. Well done!");
     incrementScore();
+    correctAnswersCount++;
+    console.log(correctAnswersCount);
   } else {  
     console.log("Wrong answer");
-    alert("Incorrect :( Better luck next time!");
+    alert("Incorrect :(");
   };
 }
 
