@@ -62,7 +62,7 @@ function setNextQuestion() {
   }
 
   // Reset the flag for following questions
-  isAnswerSelected = false; 
+  //isAnswerSelected = false; 
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
   
@@ -116,7 +116,8 @@ function endGame() {
 
   // Add a paragraph to return to home
   const homeLink = document.createElement("p");
-  homeLink.innerHTML = '<a href="index.html" aria-label="Go to Home page and choose from the selection of quizzes" class="btn">Click here to return to Homepage</a>';
+  homeLink.innerHTML = 
+  '<a href="index.html" aria-label="Go to Home page and choose from the selection of quizzes" class="btn return-link">Click here to return to Homepage</a> <br> <p> or click the restart button to try again. </p>';
   controlsArea.appendChild(homeLink);
 }
 

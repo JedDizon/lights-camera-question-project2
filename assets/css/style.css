@@ -297,6 +297,19 @@ div strong {
     margin: 2em;
 }
 
+.return-link {
+    color: #EEEEEE;
+    background-color: #FF5F00;
+    padding: 0.5em;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+}
+
+.return-link:hover {
+    color: #FF5F00;
+    border-bottom: 1px solid #FF5F00;
+    background-color: #EEEEEE;
+}
 
 /* Footer */
 footer {
