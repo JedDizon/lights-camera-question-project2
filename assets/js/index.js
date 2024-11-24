@@ -121,10 +121,17 @@ function selectAnswer(e) {
   if (correct) {
     console.log("Correct answer");
     alert("You got the Correct answer. Well done!");
+    incrementScore();
   } else {  
     console.log("Wrong answer");
     alert("Incorrect :( Better luck next time!");
   };
+}
+
+//function to increment score
+function incrementScore() {
+  let oldScore = parseInt(document.getElementById('score').innerText);
+  document.getElementById('score').innerText = oldScore + 100;
 }
 
 })
