@@ -6,10 +6,39 @@ const answerButtonsElement = document.getElementById("answer-buttons");
 
 const controlsArea = document.getElementById("controls");
 const answerArea = document.getElementById("answer-buttons");
-const startButton = document.getElementById("start-btn");
+//const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
 
-startButton.addEventListener("click", startGame);
+//startButton.addEventListener("click", startGame);
+
+//Choose different questions
+document.getElementById("action-btn").addEventListener("click", () => {
+  loadQuestions("actadvQs");
+});
+document.getElementById("animation-btn").addEventListener("click", () => {
+  loadQuestions("aniQs");
+});
+
+//Load different questions
+function loadQuestions(category) {
+  const introSectionRemoval = document.getElementById("intro");
+  const rulesSectionRemoval = document.getElementById("rules");
+  const genreSelectorRemoval = document.getElementById("genre-selector");
+
+  introSectionRemoval.remove();
+  rulesSectionRemoval.remove();
+  genreSelectorRemoval.remove();
+
+  // Show the game area
+  gameArea.classList.remove("hidden");
+
+  // Shuffle and load questions for the selected category
+  shuffledQuestions = questionSets[category].sort(() => Math.random() - 0.5);
+  currentQuestionIndex = 0;
+
+  // Start the quiz
+  setNextQuestion();
+}
 
 
 //Track if answer is selected
@@ -30,6 +59,7 @@ nextButton.addEventListener("click", () => {
   setNextQuestion();
 });
 
+/*
 function startGame() {
     console.log("Game started");
 
@@ -54,6 +84,7 @@ function startGame() {
     setNextQuestion();
 
 }
+*/
 
 function setNextQuestion() {
   console.log("Next question");
