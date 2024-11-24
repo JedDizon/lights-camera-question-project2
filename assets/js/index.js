@@ -7,11 +7,10 @@ const answerButtonsElement = document.getElementById("answer-buttons");
 const controlsArea = document.getElementById("controls");
 const answerArea = document.getElementById("answer-buttons");
 const startButton = document.getElementById("start-btn");
-const restartButton = document.getElementById("restart-btn");
 const nextButton = document.getElementById("next-btn");
 
 startButton.addEventListener("click", startGame);
-restartButton.addEventListener("click", startGame);
+
 
 //Track if answer is selected
 let isAnswerSelected = false;
