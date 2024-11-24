@@ -9,10 +9,23 @@ const answerArea = document.getElementById("answer-buttons");
 const startButton = document.getElementById("start-btn");
 const restartButton = document.getElementById("restart-btn");
 const nextButton = document.getElementById("next-btn");
+
 startButton.addEventListener("click", startGame);
 restartButton.addEventListener("click", startGame);
 
+//Track if answer is selected
+let isAnswerSelected = false;
+
+// Variable to track correct answers count
+let correctAnswersCount = 0; 
+
+
 nextButton.addEventListener("click", () => {
+  
+  if (!isAnswerSelected) {
+    alert("Please select an answer first!");
+    return;
+  }
   console.log("Next button selected");
   currentQuestionIndex++;
   setNextQuestion();
@@ -53,6 +66,8 @@ function setNextQuestion() {
     return;
   }
 
+  // Reset the flag for following questions
+  //isAnswerSelected = false; 
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
   
@@ -97,8 +112,20 @@ function resetState() {
 function endGame() {
   console.log("Game Over");
 
+  let totalScore = document.getElementById('score').innerText;
+console.log("Total Score: " + totalScore);
+
   // Clear the game area
-  questionElement.innerText = "Quiz Completed!";
+  //questionElement.innerText = "Quiz Completed!";
+
+  // Calculate score percentage and determine pass/fail (ChatGPT)
+   let passPercentage = 60; // Set pass percentage to 60%
+   let scorePercentage = (correctAnswersCount / 10) * 100;
+
+  // Show final score and pass/fail result
+   let resultMessage = scorePercentage >= passPercentage ? "You passed the quiz!" : "You failed the quiz. Better luck next time!";
+   questionElement.innerText = `Quiz Completed! ${resultMessage} You got ${scorePercentage.toFixed(2)}% with a score of ${totalScore}!`;
+
 
   // Hide answer and next button
   nextButton.classList.add("hidden");
@@ -106,13 +133,17 @@ function endGame() {
 
   // Add a paragraph to return to home
   const homeLink = document.createElement("p");
-  homeLink.innerHTML = '<a href="index.html" aria-label="Go to Home page and choose from the selection of quizzes" class="btn">Click here to return to Homepage</a>';
+  homeLink.innerHTML = 
+  `<a href="index.html" aria-label="Go to Home page and choose from the selection of quizzes" class="btn return-link">Click here to return to Homepage</a> `;
   controlsArea.appendChild(homeLink);
 }
 
 //Select answer - check if correct or wrong via true/false
 function selectAnswer(e) {
   console.log("Answer selected");
+
+  // Mark that an answer has been selected
+  isAnswerSelected = true;
 
   //check if answer is correct
   const selectedButton = e.target;
@@ -122,9 +153,11 @@ function selectAnswer(e) {
     console.log("Correct answer");
     alert("You got the Correct answer. Well done!");
     incrementScore();
+    correctAnswersCount++;
+    console.log(correctAnswersCount);
   } else {  
     console.log("Wrong answer");
-    alert("Incorrect :( Better luck next time!");
+    alert("Incorrect :(");
   };
 }
 
