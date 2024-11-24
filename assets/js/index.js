@@ -5,6 +5,7 @@ const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 
 const controlsArea = document.getElementById("controls");
+const answerArea = document.getElementById("answer-buttons");
 const startButton = document.getElementById("start-btn");
 const restartButton = document.getElementById("restart-btn");
 const nextButton = document.getElementById("next-btn");
@@ -44,13 +45,29 @@ function startGame() {
 
 function setNextQuestion() {
   console.log("Next question");
+
+  //end game after 10 qs
+  if (currentQuestionIndex >= 10 || currentQuestionIndex >= shuffledQuestions.length) {
+    alert("Game complete!");
+    endGame();
+    return;
+  }
+
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
+  
 }
 
 
 function showQuestion(question) {
+
+  // Shuffle the answers before displaying them
+  const shuffledAnswers = shuffle(question.answers);
+
+  //Display question text
   questionElement.innerText = question.question;
+
+  //create buttons for each answer
   question.answers.forEach(answer => {
     const button = document.createElement("button");
     button.innerText = answer.text;
@@ -61,7 +78,13 @@ function showQuestion(question) {
     button.addEventListener("click", selectAnswer);
     answerButtonsElement.appendChild(button);
   });
+
 }
+
+  //ensure the order of the answers changes each time a question is shown (CHATGPT)
+  function shuffle(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
 
 function resetState() {
   //nextButton.classList.add("hidden");
@@ -71,6 +94,22 @@ function resetState() {
   }
 }
 
+//End game
+function endGame() {
+  console.log("Game Over");
+
+  // Clear the game area
+  questionElement.innerText = "Quiz Completed!";
+
+  // Hide answer and next button
+  nextButton.classList.add("hidden");
+  answerArea.classList.add("hidden");
+
+  // Add a paragraph to return to home
+  const homeLink = document.createElement("p");
+  homeLink.innerHTML = '<a href="index.html" aria-label="Go to Home page and choose from the selection of quizzes" class="btn">Click here to return to Homepage</a>';
+  controlsArea.appendChild(homeLink);
+}
 
 //Select answer - check if correct or wrong via true/false
 function selectAnswer(e) {
