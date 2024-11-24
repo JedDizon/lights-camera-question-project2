@@ -86,6 +86,9 @@ See below any additional features that I would like to implement:
 Can't get all buttons to start the game with the class of "genre-btn"
 Had  startGame(this) instead of startGame(button)
 
+Couldnt get next button to work.
+Used devtools to check with console log that I ahve correct ids logged. Found I had duplicated the IDs. wrapped entire script in domcontent loaded to fix
+
 
 ### index (Home)
 
