@@ -148,6 +148,7 @@ console.log("Total Score: " + totalScore);
 
   // Hide answer and next button
   nextButton.classList.add("hidden");
+  nextButton.classList.remove("btn");
   answerArea.classList.add("hidden");
 
   // Add a paragraph to return to home
@@ -174,13 +175,20 @@ function selectAnswer(e) {
 
   if (correct) {
     console.log("Correct answer");
-    alert("You got the Correct answer. Well done!");
+    //alert("You got the Correct answer. Well done!");
     incrementScore();
     correctAnswersCount++;
     console.log(correctAnswersCount);
+
+    //Add right answer css class to answer when selected
+    selectedButton.classList.add("right-ans");
+
   } else {  
     console.log("Wrong answer");
-    alert("Incorrect :(");
+    //alert("Incorrect :(");
+
+    //Add incrorrect answer css class to answer when selected
+    selectedButton.classList.add("wrong-ans");
   };
 }
 
