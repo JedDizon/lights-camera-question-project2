@@ -311,6 +311,47 @@ div strong {
     background-color: #EEEEEE;
 }
 
+/* Buttons */
+.btn {
+    padding: 11px 25px;
+    margin: 1em;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    display: inline-block; 
+    border: 1px solid #EEEEEE;
+    background: #00092C;
+    color: #EEEEEE;
+}
+
+.btn:hover {
+    border: 1px solid #00092C;
+    background: #EEEEEE;
+    color: #00092C;
+}
+
+.genre-btn {
+    color: #EEEEEE;
+    background-color: #FF5F00;
+}
+    
+.genre-btn:hover {
+    color: #FF5F00;
+    background-color: #EEEEEE;
+}
+
+
+.right-ans {
+    background: #C0EDA6;
+    color: #00092C;
+}
+
+.wrong-ans {
+    background: #FD5D5D;
+    color: #EEEEEE;
+}
+
 /* Footer */
 footer {
     background-color: #00092C;

@@ -10,8 +10,6 @@ const answerArea = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
 
-//startButton.addEventListener("click", startGame);
-
 //Choose different questions
 document.getElementById("action-btn").addEventListener("click", () => {
   loadQuestions("actadvQs");
@@ -80,13 +78,13 @@ function setNextQuestion() {
 
   //end game after 10 qs
   if (currentQuestionIndex >= 10 || currentQuestionIndex >= shuffledQuestions.length) {
-    alert("Game complete!");
+    //alert("Game complete!");
     endGame();
     return;
   }
 
   // Reset the flag for following questions
-  //isAnswerSelected = false; 
+  isAnswerSelected = false; 
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
   
@@ -137,17 +135,18 @@ console.log("Total Score: " + totalScore);
   // Clear the game area
   //questionElement.innerText = "Quiz Completed!";
 
-  // Calculate score percentage and determine pass/fail (ChatGPT)
-   let passPercentage = 60; // Set pass percentage to 60%
+  // Calculate score percentage
+   let passPercentage = 60; 
    let scorePercentage = (correctAnswersCount / 10) * 100;
 
   // Show final score and pass/fail result
-   let resultMessage = scorePercentage >= passPercentage ? "You passed the quiz!" : "You failed the quiz. Better luck next time!";
+   let resultMessage = scorePercentage >= passPercentage ? "You must be a real movie buff!" : "You need to watch more movies. Better luck next time!";
    questionElement.innerText = `Quiz Completed! ${resultMessage} You got ${scorePercentage.toFixed(2)}% with a score of ${totalScore}!`;
 
 
   // Hide answer and next button
   nextButton.classList.add("hidden");
+  nextButton.classList.remove("btn");
   answerArea.classList.add("hidden");
 
   // Add a paragraph to return to home
@@ -174,14 +173,22 @@ function selectAnswer(e) {
 
   if (correct) {
     console.log("Correct answer");
-    alert("You got the Correct answer. Well done!");
+    //alert("You got the Correct answer. Well done!");
     incrementScore();
     correctAnswersCount++;
     console.log(correctAnswersCount);
+
+    //Add right answer css class to answer when selected
+    selectedButton.classList.add("right-ans");
+
   } else {  
     console.log("Wrong answer");
-    alert("Incorrect :(");
+    //alert("Incorrect :(");
+
+    //Add incrorrect answer css class to answer when selected
+    selectedButton.classList.add("wrong-ans");
   };
+
 }
 
 //function to increment score
