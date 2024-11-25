@@ -342,6 +342,16 @@ div strong {
 }
 
 
+.right-ans {
+    background: #C0EDA6;
+    color: #00092C;
+}
+
+.wrong-ans {
+    background: #FD5D5D;
+    color: #EEEEEE;
+}
+
 /* Footer */
 footer {
     background-color: #00092C;
