@@ -1,4 +1,5 @@
-const actadvQs = [
+const questionSets = {
+actadvQs: [
    {
     question: 'In Indiana Jones and the Last Crusade, who plays Indiana Jones’ father?',
     answers: [
@@ -133,9 +134,9 @@ const actadvQs = [
         { text: 'Chad Stahelski', correct: false }
     ]
 }
-];
+],
 
-const aniQs = [
+aniQs: [
   {
     question: 'In The Lion King, what is the name of Simba’s evil uncle?',
     answers: [
@@ -271,9 +272,9 @@ const aniQs = [
         { text: 'Butcher', correct: false }
     ]
 }
-];
+],
 
-const claQs = [
+claQs: [
   {
     question: 'In Casablanca, what song does Sam play that holds special meaning for Rick and Ilsa?',
     answers: [
@@ -409,9 +410,9 @@ const claQs = [
         { text: 'Sunset Boulevard', correct: false }
     ]
 }
-];
+],
 
-const comQs = [
+comQs: [
   {
     question: 'In Dumb and Dumber, what are the names of the two main characters played by Jim Carrey and Jeff Daniels?',
     answers: [
@@ -547,9 +548,9 @@ const comQs = [
         { text: 'The Slippery Bandits', correct: false }
     ]
 }
-];
+],
 
-const horQs = [
+horQs: [
   {
     question: 'In Halloween (1978), what is the name of the masked killer?',
     answers: [
@@ -685,9 +686,9 @@ const horQs = [
         { text: 'Basement', correct: false }
     ]
 }
-];
+],
 
-const romQs = [
+romQs: [
   {
     question: 'In The Notebook, what is the name of the character played by Ryan Gosling?',
     answers: [
@@ -823,4 +824,5 @@ const romQs = [
         { text: 'On a road trip', correct: true }
     ]
 }
-];
+],
+}

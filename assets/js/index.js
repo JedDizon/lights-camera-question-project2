@@ -6,12 +6,55 @@ const answerButtonsElement = document.getElementById("answer-buttons");
 
 const controlsArea = document.getElementById("controls");
 const answerArea = document.getElementById("answer-buttons");
-const startButton = document.getElementById("start-btn");
-const restartButton = document.getElementById("restart-btn");
+//const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
 
-startButton.addEventListener("click", startGame);
-restartButton.addEventListener("click", startGame);
+//startButton.addEventListener("click", startGame);
+
+//Choose different questions
+document.getElementById("action-btn").addEventListener("click", () => {
+  loadQuestions("actadvQs");
+});
+document.getElementById("animation-btn").addEventListener("click", () => {
+  loadQuestions("aniQs");
+});
+document.getElementById("romance-btn").addEventListener("click", () => {
+  loadQuestions("romQs");
+});
+document.getElementById("classics-btn").addEventListener("click", () => {
+  loadQuestions("claQs");
+});
+document.getElementById("horror-btn").addEventListener("click", () => {
+  loadQuestions("horQs");
+});
+document.getElementById("comedy-btn").addEventListener("click", () => {
+  loadQuestions("comQs");
+});
+
+
+//Load questions
+function loadQuestions(category) {
+
+  //Remove intro, rules, genre selector sections
+  const introSectionRemoval = document.getElementById("intro");
+  const rulesSectionRemoval = document.getElementById("rules");
+  const genreSelectorRemoval = document.getElementById("genre-selector");
+
+  introSectionRemoval.remove();
+  rulesSectionRemoval.remove();
+  genreSelectorRemoval.remove();
+
+  // Show the game area
+  gameArea.classList.remove("hidden");
+
+  // Shuffle and load questions
+  shuffledQuestions = questionSets[category].sort(() => Math.random() - 0.5);
+  currentQuestionIndex = 0;
+
+  // Start the quiz
+  setNextQuestion();
+}
+
 
 //Track if answer is selected
 let isAnswerSelected = false;
@@ -30,31 +73,6 @@ nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
   setNextQuestion();
 });
-
-function startGame() {
-    console.log("Game started");
-
-    //Remove intro, rules, genre selector sections
-    const introSectionRemoval = document.getElementById("intro");
-    introSectionRemoval.remove();
-
-    const rulesSectionRemoval = document.getElementById("rules");
-    rulesSectionRemoval.remove();
-    
-    const genreSelectorRemoval = document.getElementById("genre-selector");
-    genreSelectorRemoval.remove();
-
-    // Show the game area
-    gameArea.classList.remove("hidden");
-
-    //Shuffled question
-    shuffledQuestions = actadvQs.sort(() => Math.random() - .5);
-    currentQuestionIndex = 0;
-
-    //Upload question
-    setNextQuestion();
-
-}
 
 function setNextQuestion() {
   console.log("Next question");
