@@ -10,8 +10,6 @@ const answerArea = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
 
-//startButton.addEventListener("click", startGame);
-
 //Choose different questions
 document.getElementById("action-btn").addEventListener("click", () => {
   loadQuestions("actadvQs");
@@ -190,6 +188,7 @@ function selectAnswer(e) {
     //Add incrorrect answer css class to answer when selected
     selectedButton.classList.add("wrong-ans");
   };
+
 }
 
 //function to increment score
