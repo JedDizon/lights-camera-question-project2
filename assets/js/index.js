@@ -164,6 +164,10 @@ function selectAnswer(e) {
   // Mark that an answer has been selected
   isAnswerSelected = true;
 
+  // Disable all answer buttons to prevent changing answers
+    const buttons = answerButtonsElement.querySelectorAll("button");
+    buttons.forEach(button => button.disabled = true);
+
   //check if answer is correct
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
