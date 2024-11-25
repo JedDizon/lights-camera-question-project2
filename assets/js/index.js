@@ -86,7 +86,7 @@ function setNextQuestion() {
   }
 
   // Reset the flag for following questions
-  //isAnswerSelected = false; 
+  isAnswerSelected = false; 
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
   
