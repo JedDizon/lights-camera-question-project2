@@ -80,7 +80,7 @@ function setNextQuestion() {
 
   //end game after 10 qs
   if (currentQuestionIndex >= 10 || currentQuestionIndex >= shuffledQuestions.length) {
-    alert("Game complete!");
+    //alert("Game complete!");
     endGame();
     return;
   }
@@ -137,12 +137,12 @@ console.log("Total Score: " + totalScore);
   // Clear the game area
   //questionElement.innerText = "Quiz Completed!";
 
-  // Calculate score percentage and determine pass/fail (ChatGPT)
-   let passPercentage = 60; // Set pass percentage to 60%
+  // Calculate score percentage
+   let passPercentage = 60; 
    let scorePercentage = (correctAnswersCount / 10) * 100;
 
   // Show final score and pass/fail result
-   let resultMessage = scorePercentage >= passPercentage ? "You passed the quiz!" : "You failed the quiz. Better luck next time!";
+   let resultMessage = scorePercentage >= passPercentage ? "You must be a real movie buff!" : "You need to watch more movies. Better luck next time!";
    questionElement.innerText = `Quiz Completed! ${resultMessage} You got ${scorePercentage.toFixed(2)}% with a score of ${totalScore}!`;
 
 
