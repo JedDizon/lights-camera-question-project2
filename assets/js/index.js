@@ -9,6 +9,7 @@ const answerArea = document.getElementById("answer-buttons");
 //const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
 
+
 //startButton.addEventListener("click", startGame);
 
 //Choose different questions
