@@ -11,7 +11,7 @@ jura for title, logo, nav
     box-sizing: border-box;
 }
 
-/*Root color for main color palette*/
+/*CSS variables for main color palette*/
 :root {
     --primary-color: #FF5F00;
     --secondary-color: #B20600;

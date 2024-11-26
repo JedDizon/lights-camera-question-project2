@@ -9,25 +9,42 @@ const answerArea = document.getElementById("answer-buttons");
 //const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
 
+/**
+ * Attach event listeners to buttons for quiz themes (chat gpt)
+ */
+const buttons = document.querySelectorAll("[data-type]"); // Select buttons with `data-type`
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const gameType = button.getAttribute("data-type"); // Get `data-type` of the clicked button
+    colorPaletteUpdate(gameType); // Update color palette
+  });
+});
 
 //Choose different questions
 document.getElementById("action-btn").addEventListener("click", () => {
   loadQuestions("actadvQs");
+  colorPaletteUpdate();
 });
 document.getElementById("animation-btn").addEventListener("click", () => {
   loadQuestions("aniQs");
+  colorPaletteUpdate();
 });
 document.getElementById("romance-btn").addEventListener("click", () => {
   loadQuestions("romQs");
+  colorPaletteUpdate();
 });
 document.getElementById("classics-btn").addEventListener("click", () => {
   loadQuestions("claQs");
+  colorPaletteUpdate();
 });
 document.getElementById("horror-btn").addEventListener("click", () => {
   loadQuestions("horQs");
+  colorPaletteUpdate();
 });
 document.getElementById("comedy-btn").addEventListener("click", () => {
   loadQuestions("comQs");
+  colorPaletteUpdate();
 });
 
 
@@ -200,45 +217,66 @@ function incrementScore() {
 /**
  * Updates page color palette
  */
-function colorPaletteUpdate() {
-  console.log("test")
+function colorPaletteUpdate(gameType) {
+  console.log("Updating color palette for theme:", gameType);
+
+  // Get the root element
+  const root = document.querySelector(":root");
+
+ // Get selected theme's color palette from genreThemes
+ const themeColors = genreThemes[gameType];
+
+  //Change the style value for the root
+  //root.style.setProperty("--primary-color", "pink");
+  
+  if (themeColors) {
+    // Update only the primary color CSS variable
+    root.style.setProperty("--primary-color", themeColors["--primary-color"]);
+    root.style.setProperty("--secondary-color", themeColors["--secondary-color"]);
+    root.style.setProperty("--background-color", themeColors["--background-color"]);
+    root.style.setProperty("--text-color", themeColors["--text-color"]);
+    console.log("Colors updated to:", gametype);
+  } else {
+    console.warn("Theme not found:", gameType);
+  }
+
 }
 
 /**
  * Constant for genre color palettes
  */
 const genreThemes = {
-  "action-adventure-theme": {
+  actadvgame: {
       "--primary-color": "#124076", // blue
       "--secondary-color": "#7F9F80", // light green
       "--background-color": "#F9E897", // light yellow
       "--text-color": "#FFC374" // light orange
   },
-  "animation-theme": {
+  animgame: {
       "--primary-color": "#27005D", // Dark violet
       "--secondary-color": "#9400FF", // purple
       "--background-color": "#AED2FF", // light blue
       "--text-color": "#E4F1FF" // lighter blue
   },
-  "romance-theme": {
+  romgame: {
       "--primary-color": "#E72929", // red
       "--secondary-color": "#FF5BAE", // Hot Pink
       "--background-color": "#FFE4CF", // peach
       "--text-color": "#FFFDD7" // light yellow
   },
-  "classics-theme": {
+  clagame: {
       "--primary-color": "#EDDFE0", // light pink
       "--secondary-color": "#F5F5F7", // light gray
       "--background-color": "#B7B7B7", // gray
       "--text-color": "#705C53" // brown
   },
-  "horror-theme": {
+  horgame: {
       "--primary-color": "#0F0F0F", // black
       "--secondary-color": "#232D3F", // navy
       "--background-color": "#005B41", // Dark green
       "--text-color": "#008170" // lighter green
   },
-  "comedy-theme": {
+  comgame: {
       "--primary-color": "#FFF100", // Bright yellow
       "--secondary-color": "#006BFF", // blue
       "--background-color": "#08C2FF", // light blue
