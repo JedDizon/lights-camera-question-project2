@@ -249,24 +249,24 @@ const genreThemes = {
   actadvgame: {
       "--primary-color": "#124076", // blue
       "--secondary-color": "#7F9F80", // light green
-      "--background-color": "#F9E897", // light yellow
-      "--text-color": "#FFC374" // light orange
+      "--background-color": "#124076", // blue
+      "--text-color": "#F9E897" // light yellow
   },
   animgame: {
       "--primary-color": "#27005D", // Dark violet
       "--secondary-color": "#9400FF", // purple
-      "--background-color": "#AED2FF", // light blue
+      "--background-color": "#27005D", // dark violet
       "--text-color": "#E4F1FF" // lighter blue
   },
   romgame: {
       "--primary-color": "#E72929", // red
       "--secondary-color": "#FF5BAE", // Hot Pink
-      "--background-color": "#FFE4CF", // peach
+      "--background-color": "#E72929", // red
       "--text-color": "#FFFDD7" // light yellow
   },
   clagame: {
       "--primary-color": "#EDDFE0", // light pink
-      "--secondary-color": "#F5F5F7", // light gray
+      "--secondary-color": "#705C53", // brown
       "--background-color": "#B7B7B7", // gray
       "--text-color": "#705C53" // brown
   },
@@ -274,13 +274,13 @@ const genreThemes = {
       "--primary-color": "#0F0F0F", // black
       "--secondary-color": "#232D3F", // navy
       "--background-color": "#005B41", // Dark green
-      "--text-color": "#008170" // lighter green
+      "--text-color": "#EEEEEE" // white
   },
   comgame: {
       "--primary-color": "#FFF100", // Bright yellow
       "--secondary-color": "#006BFF", // blue
       "--background-color": "#08C2FF", // light blue
-      "--text-color": "#BCF2F6" // lighter blue
+      "--text-color": "#00092C" // black
   }
 };
 
