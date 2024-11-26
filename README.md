@@ -15,18 +15,18 @@ Welcome to <em> Lights, Camera, Question! </em>, the ultimate destination for fi
 ## Features
 
 **Mobile-Responsive**: Optimised for both desktop and mobile devices.
+
 **Quiz genres**: 6 genres of film to choose from to test your film knowledge.
 
+**Randomized** questions and answers for variety.
+
+**Score tracking** and end-game results.
+
+Clean and intuitive **interface**.
+
+**Footer social media** for ways to get in contact with us.
+
 ---
-
-
-## Existing Features 
-
-
-menu/nav
-Quiz drop down
-Footer social media
-Player score tracker
 
 ### Future Features
 
@@ -58,8 +58,32 @@ See below any additional features that I would like to implement:
 
 ## Testing
 
-### W3C HTML Validation
+### Manual Testing
 
+Below are the details of manual tests conducted to ensure functionality:
+
+| TEST                   | ACTION                                | EXPECTATION                              | RESULT    |
+|------------------------|---------------------------------------|------------------------------------------|-----------|
+| **Page title goes to Home page**   | User clicks on the **Lights, Camera, Question!** link | **Home page** opens           | **SUCCESS** |
+| **Home Link**          | User clicks on the **Home** link      | The **home** page opens                   | **SUCCESS** |
+| **Action / adventure quiz Link**   | User clicks on the **Click here to start!** link | The **Action / adventure** quiz opens            | **SUCCESS** |
+| **Animation quiz Link**   | User clicks on the **Click here to start!** link | The **Animation** quiz opens            | **SUCCESS** |
+| **Romance quiz Link**   | User clicks on the **Click here to start!** link | The **Romance** quiz opens            | **SUCCESS** |
+| **Classics quiz Link**   | User clicks on the **Click here to start!** link | The **Classics** quiz opens            | **SUCCESS** |
+| **Horror quiz Link**   | User clicks on the **Click here to start!** link | The **Horror** quiz opens            | **SUCCESS** |
+| **Comedy quiz Link**   | User clicks on the **Click here to start!** link | The **Comedy** quiz opens            | **SUCCESS** |
+| **Twitter / X link**   | User clicks on **Twitter / X logo** link | The **website** quiz opens in another tab         | **SUCCESS** |
+| **Youtube link**   | User clicks on **Youtube logo** link | The **website** quiz opens in another tab         | **SUCCESS** |
+| **Facebook link**   | User clicks on **Facebook logo** link | The **website** quiz opens in another tab         | **SUCCESS** |
+| **Instagram link**   | User clicks on **Instagram logo** link | The **website** quiz opens in another tab         | **SUCCESS** |
+| **Answer buttons**   | User clicks on an **answer button** | Changes color to green or red depending if correct or incorrect answer        | **SUCCESS** |
+| **Answer buttons** permanent  | User clicks on an **answer button** | Cannot change answer once the user finds out that the answer they chose is correct or incorrect        | **SUCCESS** |
+| **Next button**  | User clicks on **next button** | Alerts user to choose an answer before next question loads       | **SUCCESS** |
+| **Pass or fail results**  | User finishes a quiz | Comemnt at the end to state if they passed or failed, what percentage and score they recieved      | **SUCCESS** |
+| **Return to Home button** appearance  | User finishes a quiz | Button to bring user back to home appears at the end      | **SUCCESS** |
+| **Return to Home button**  | User clicks **Click here to return to Homepage** button | Button brings user back to homepage    | **SUCCESS** |
+
+### W3C HTML Validation
 
 
 ### W3C CSS Validation
@@ -83,19 +107,19 @@ See below any additional features that I would like to implement:
 
 ## Bugs 
 
-Can't get all buttons to start the game with the class of "genre-btn"
-Had  startGame(this) instead of startGame(button)
+See below the main bugs I found throughout the development process:
 
-Couldnt get next button to work.
-Used devtools to check with console log that I ahve correct ids logged. Found I had duplicated the IDs. wrapped entire script in domcontent loaded to fix
+  - Can't get all buttons to start the game with the class of "genre-btn".
+    - FIX: Had startGame(this) instead of startGame(button).
 
+  - Couldnt get next button to work.
+    - FIX: Used devtools to check with console log that I have correct ids logged. Found I had duplicated the IDs; removed duplicate. Also wrapped entire script in domcontent loaded. 
 
-### index (Home)
+  - Quiz answers kept showing up in position 1 (always at the same place).
 
+  - Users can pick a different answer after notification of answer correct/incorrect.
 
-
-### Quiz Page
-
+  - Users can skip to the end of the quiz without choosing an answer. 
 
 
 ---
@@ -126,6 +150,17 @@ This project was deployed on Github. The site to deploy can be read below:
 
  Lights, Camera, Question! < https://jeddizon.github.io/lights-camera-question-project2/ >
 
+
+### Installation
+
+Steps to set up the project on a local machine:
+
+  1. Clone the repository:
+
+    git clone https://github.com/your-username/movie-quiz-game.git
+
+  2. Open the index.html file in a browser to play.
+
 ---
 
 
@@ -146,13 +181,12 @@ This project was deployed on Github. The site to deploy can be read below:
   - Love running/Chieftain mbt code for dropdown, initial styling for logo, initial css for website.
   - Love Maths - for js
   - Stack Overflow
-   
+  - Markdown Guide for README < https://www.markdownguide.org/cheat-sheet/ >
 
 ### Media 
-
 
 - Icons: Font Awesome < https://fontawesome.com >
 - Photos: 
 - Colour palette combinations: 
-  - Colorhunt <  https://colorhunt.co >
+  - Main color palette <  https://colorhunt.co/palette/ff5f00b2060000092ceeeeee >
 
