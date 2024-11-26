@@ -204,4 +204,46 @@ function colorPaletteUpdate() {
   console.log("test")
 }
 
+/**
+ * Constant for genre color palettes
+ */
+const genreThemes = {
+  "action-adventure-theme": {
+      "--primary-color": "#124076", // blue
+      "--secondary-color": "#7F9F80", // light green
+      "--background-color": "#F9E897", // light yellow
+      "--text-color": "#FFC374" // light orange
+  },
+  "animation-theme": {
+      "--primary-color": "#27005D", // Dark violet
+      "--secondary-color": "#9400FF", // purple
+      "--background-color": "#AED2FF", // light blue
+      "--text-color": "#E4F1FF" // lighter blue
+  },
+  "romance-theme": {
+      "--primary-color": "#E72929", // red
+      "--secondary-color": "#FF5BAE", // Hot Pink
+      "--background-color": "#FFE4CF", // peach
+      "--text-color": "#FFFDD7" // light yellow
+  },
+  "classics-theme": {
+      "--primary-color": "#EDDFE0", // light pink
+      "--secondary-color": "#F5F5F7", // light gray
+      "--background-color": "#B7B7B7", // gray
+      "--text-color": "#705C53" // brown
+  },
+  "horror-theme": {
+      "--primary-color": "#0F0F0F", // black
+      "--secondary-color": "#232D3F", // navy
+      "--background-color": "#005B41", // Dark green
+      "--text-color": "#008170" // lighter green
+  },
+  "comedy-theme": {
+      "--primary-color": "#FFF100", // Bright yellow
+      "--secondary-color": "#006BFF", // blue
+      "--background-color": "#08C2FF", // light blue
+      "--text-color": "#BCF2F6" // lighter blue
+  }
+};
+
 })
