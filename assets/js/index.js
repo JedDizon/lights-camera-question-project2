@@ -197,4 +197,11 @@ function incrementScore() {
   document.getElementById('score').innerText = oldScore + 100;
 }
 
+/**
+ * Updates page color palette
+ */
+function colorPaletteUpdate() {
+  console.log("test")
+}
+
 })
