@@ -75,18 +75,46 @@ The color palette for the animation genre quiz exudes creativity, imagination, a
 
 ![Color Palette](/assets/images/lcq-rom-theme.png)
 
+
+The color palette for the romance genre quiz embodies passion, tenderness, and warmth:
+
+  - #E72929 (Rich Red): Symbolizes love and intensity, the essence of romance.
+  - #FF5BAE (Bright Pink): Adds a playful and affectionate touch, reflecting romantic emotions.
+  - #FFE4CF (Soft Peach): Conveys warmth and intimacy, creating a welcoming atmosphere.
+  - #FFFDD7 (Light Cream): Offers a gentle, dreamy background, enhancing the romantic mood.
+
 #### Classics genre
 
 ![Color Palette](/assets/images/lcq-cla-theme.png)
+
+The color palette for classical movies reflects elegance, nostalgia, and timeless sophistication:
+
+  - #EDDFE0 (Soft Rose): Evokes a sense of vintage charm and subtle beauty.
+  - #F5F5F7 (Light Gray): Adds a clean and understated elegance, reminiscent of classic film reels.
+  - #B7B7B7 (Muted Silver): Symbolizes the glamour and prestige of the golden age of cinema.
+  - #705C53 (Warm Brown): Grounds the palette with a touch of antiquity, echoing the sepia tones of old films.
 
 #### Horror genre
 
 ![Color Palette](/assets/images/lcq-hor-theme.png)
 
+The color palette for the horror genre quiz conveys fear, suspense, and unease:
+
+  - #0F0F0F (Pitch Black): Represents darkness and the unknown, essential elements of horror.
+  - #232D3F (Dark Gray-Blue): Adds a cold, eerie tone, enhancing the atmosphere of dread.
+  - #005B41 (Deep Green): Evokes a sense of decay and unease, aligning with horror's unsettling themes.
+  - #008170 (Murky Teal): Introduces a chilling, unnatural vibrancy, heightening tension and fear.
+
 #### Comedy genre
 
 ![Color Palette](/assets/images/lcq-com-theme.png)
 
+The color palette for the comedy genre quiz radiates joy, energy, and playfulness:
+
+  - #FFF100 (Bright Yellow): Symbolizes happiness and laughter, the heart of comedy.
+  - #006BFF (Bold Blue): Adds a lively and energetic contrast, reflecting dynamic humor.
+  - #08C2FF (Vivid Cyan): Brings a refreshing and fun vibe, echoing lighthearted moments.
+  - #BCF2F6 (Soft Aqua): Provides a breezy, cheerful touch, creating an inviting and whimsical atmosphere.
 
 ---
 
