@@ -144,6 +144,12 @@ Link to validator results:
 
 ### JSHint
 
+#### index.js
+
+
+#### questionArrays.js
+
+
 ---
 
 ## Responsiveness

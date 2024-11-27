@@ -74,6 +74,7 @@ function loadQuestions(category) {
   gameArea.classList.remove("hidden");
 
   //shuffle and load questions
+  //questionSets defined in questionArrays.js
   shuffledQuestions = questionSets[category].sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
 
@@ -223,7 +224,7 @@ function selectAnswer(e) {
 
     //Add incrorrect answer css class to answer when selected
     selectedButton.classList.add("wrong-ans");
-  };
+  }
 
 }
 
@@ -303,4 +304,4 @@ const genreThemes = {
   }
 };
 
-})
+});
