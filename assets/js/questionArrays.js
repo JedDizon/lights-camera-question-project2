@@ -1,3 +1,6 @@
+/**
+ * Question sets for the quizzes
+ */
 const questionSets = {
 actadvQs: [
    {

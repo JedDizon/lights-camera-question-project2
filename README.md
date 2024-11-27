@@ -181,7 +181,13 @@ Steps to set up the project on a local machine:
   - Love running/Chieftain mbt code for dropdown, initial styling for logo, initial css for website.
   - Love Maths - for js
   - Stack Overflow
+    - Update css with js < https://stackoverflow.com/questions/61802008/vue-js-how-can-i-access-and-change-css-root-variables-from-vue-component-to-to/61803134 >
   - Markdown Guide for README < https://www.markdownguide.org/cheat-sheet/ >
+  - Youtube - Web Dev Simplified - quiz code structure and flow < https://www.youtube.com/watch?v=riDzcEQbX6k >
+  - W3Schools
+    - Update css root variable using js < https://www.w3schools.com/css/css3_variables_javascript.asp >
+  - Observable hq 
+    - Update css with js < https://observablehq.com/@triptych/how-to-change-the-value-of-css-variables-with-javascript-unt >
 
 ### Media 
 
