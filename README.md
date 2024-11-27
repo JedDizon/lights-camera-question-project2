@@ -131,8 +131,9 @@ Below are the details of manual tests conducted to ensure functionality:
 
 ### W3C HTML Validation
 
+![W3C HTML Validation](assets/images/lcq-w3c-html-validation.png)
 
-Link to validator results:
+Link to validator results: < https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeddizon.github.io%2Flights-camera-question-project2%2F >
 
 ### W3C CSS Validation
 
