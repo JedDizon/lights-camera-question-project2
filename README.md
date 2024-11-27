@@ -7,7 +7,7 @@ Welcome to <em> Lights, Camera, Question! </em>, the ultimate destination for fi
 
  Lights, Camera, Question! < (https://jeddizon.github.io/lights-camera-question-project2/) >
 
-![Website mockup]()
+![Website mockup](/assets/images/lcq-website-mockup.png)
 
 ---
 
