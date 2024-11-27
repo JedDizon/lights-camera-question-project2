@@ -11,22 +11,6 @@ Welcome to <em> Lights, Camera, Question! </em>, the ultimate destination for fi
 
 ---
 
-
-## Features
-
-**Mobile-Responsive**: Optimised for both desktop and mobile devices.
-
-**Quiz genres**: 6 genres of film to choose from to test your film knowledge.
-
-**Randomized** questions and answers for variety.
-
-**Score tracking** and end-game results.
-
-Clean and intuitive **interface**.
-
-**Footer social media** for ways to get in contact with us.
-
-
 ## Existing Features
 
 ### General Features:
@@ -40,6 +24,8 @@ Clean and intuitive **interface**.
 
   - A toggle menu for easy navigation across pages or sections.
   - Clear and accessible links with ARIA labels.
+
+  ![Toggable Navbar to home](/assets/images/lcq-navbar.png)
 
 #### Accessible Design:
 
@@ -60,18 +46,26 @@ Clean and intuitive **interface**.
   - "Next Question" button ensures users complete a question before proceeding.
   - Tracks and displays player progress and score throughout the game.
 
+  ![Next button](/assets/images/lcq-nextbutton.png)
+
 #### End Screen:
 
   - Displays total score and a message based on performance.
   - Includes a link to return to the homepage and try another genre.
 
+  ![Endscreen](/assets/images/lcq-endscreen.png)
+
 #### Rules Section:
 
   - Clear guidelines for how to play the game, ensuring users understand expectations before starting.
 
+  ![Rules section](/assets/images/lcq-rules.png)
+
 #### Social Media Links:
 
   - Links to social platforms for further engagement or updates on similar projects.
+
+  ![Social Media](/assets/images/lcq-socialmedia.png)
 
 #### Dynamic Question and Answer Management:
 
