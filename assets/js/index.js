@@ -1,4 +1,11 @@
+/**
+ * wrapped whole script in domcontentloaded to ensure event listeners are working
+ */
 document.addEventListener("DOMContentLoaded", () => {
+
+/**
+ * global variables
+ */
 let gameArea = document.getElementById("gamearea");
 let shuffledQuestions, currentQuestionIndex;
 const questionElement = document.getElementById("question");
@@ -6,14 +13,12 @@ const answerButtonsElement = document.getElementById("answer-buttons");
 
 const controlsArea = document.getElementById("controls");
 const answerArea = document.getElementById("answer-buttons");
-//const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
 
 /**
- * Attach event listeners to buttons for quiz themes (chat gpt)
+ * Attach event listeners to buttons for quiz themes to update color palettes (chat gpt)
  */
 const buttons = document.querySelectorAll("[data-type]"); // Select buttons with `data-type`
-
 buttons.forEach(button => {
   button.addEventListener("click", () => {
     const gameType = button.getAttribute("data-type"); // Get `data-type` of the clicked button
@@ -21,7 +26,9 @@ buttons.forEach(button => {
   });
 });
 
-//Choose different questions
+/**
+ * Choose different genre quiz
+ */
 document.getElementById("action-btn").addEventListener("click", () => {
   loadQuestions("actadvQs");
   colorPaletteUpdate();
@@ -48,10 +55,13 @@ document.getElementById("comedy-btn").addEventListener("click", () => {
 });
 
 
-//Load questions
+/**
+ * Load Questions
+ */
 function loadQuestions(category) {
 
-  //Remove intro, rules, genre selector sections
+  
+  //Remove intro, rules, genre selector sections to prep page for game
   const introSectionRemoval = document.getElementById("intro");
   const rulesSectionRemoval = document.getElementById("rules");
   const genreSelectorRemoval = document.getElementById("genre-selector");
@@ -60,10 +70,10 @@ function loadQuestions(category) {
   rulesSectionRemoval.remove();
   genreSelectorRemoval.remove();
 
-  // Show the game area
+   //show game area
   gameArea.classList.remove("hidden");
 
-  // Shuffle and load questions
+  //shuffle and load questions
   shuffledQuestions = questionSets[category].sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
 
@@ -74,11 +84,12 @@ function loadQuestions(category) {
 
 //Track if answer is selected
 let isAnswerSelected = false;
-
 // Variable to track correct answers count
 let correctAnswersCount = 0; 
 
-
+/**
+ * Next button function to ensure users choose an answer before clicking next
+ */
 nextButton.addEventListener("click", () => {
   
   if (!isAnswerSelected) {
@@ -90,12 +101,14 @@ nextButton.addEventListener("click", () => {
   setNextQuestion();
 });
 
+/** 
+ * Checks if question limit is reached before calling the showquestion function
+*/
 function setNextQuestion() {
   console.log("Next question");
 
   //end game after 10 qs
   if (currentQuestionIndex >= 10 || currentQuestionIndex >= shuffledQuestions.length) {
-    //alert("Game complete!");
     endGame();
     return;
   }
@@ -107,7 +120,9 @@ function setNextQuestion() {
   
 }
 
-
+/** 
+ * Loads up question and creates buttons for answers
+*/
 function showQuestion(question) {
 
   // Shuffle the answers before displaying them
@@ -130,19 +145,26 @@ function showQuestion(question) {
 
 }
 
-  //ensure the order of the answers changes each time a question is shown (CHATGPT)
+  /**
+   * ensure the order of the answers changes each time a question is shown (CHATGPT)
+   */
   function shuffle(array) {
     return array.sort(() => Math.random() - 0.5);
   }
 
+  /**
+   * Ensures previous answer buttons do not show up for following questions
+   */
 function resetState() {
-  //nextButton.classList.add("hidden");
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
 }
 
 //End game
+/**
+ * Function to end the game, calculate score, message user of result, and displays back to home link
+ */
 function endGame() {
   console.log("Game Over");
 
@@ -173,7 +195,9 @@ console.log("Total Score: " + totalScore);
   controlsArea.appendChild(homeLink);
 }
 
-//Select answer - check if correct or wrong via true/false
+/**
+ * Select answer - check if correct or wrong via true/false
+ */
 function selectAnswer(e) {
   console.log("Answer selected");
 
@@ -190,7 +214,6 @@ function selectAnswer(e) {
 
   if (correct) {
     console.log("Correct answer");
-    //alert("You got the Correct answer. Well done!");
     incrementScore();
     correctAnswersCount++;
     console.log(correctAnswersCount);
@@ -200,7 +223,6 @@ function selectAnswer(e) {
 
   } else {  
     console.log("Wrong answer");
-    //alert("Incorrect :(");
 
     //Add incrorrect answer css class to answer when selected
     selectedButton.classList.add("wrong-ans");
@@ -208,7 +230,9 @@ function selectAnswer(e) {
 
 }
 
-//function to increment score
+/**
+ * function to increment score
+ */
 function incrementScore() {
   let oldScore = parseInt(document.getElementById('score').innerText);
   document.getElementById('score').innerText = oldScore + 100;
@@ -226,9 +250,7 @@ function colorPaletteUpdate(gameType) {
  // Get selected theme's color palette from genreThemes
  const themeColors = genreThemes[gameType];
 
-  //Change the style value for the root
-  //root.style.setProperty("--primary-color", "pink");
-  
+  //Change the style value for the root 
   if (themeColors) {
     // Update only the primary color CSS variable
     root.style.setProperty("--primary-color", themeColors["--primary-color"]);
