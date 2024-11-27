@@ -171,9 +171,6 @@ function endGame() {
   let totalScore = document.getElementById('score').innerText;
 console.log("Total Score: " + totalScore);
 
-  // Clear the game area
-  //questionElement.innerText = "Quiz Completed!";
-
   // Calculate score percentage
    let passPercentage = 60; 
    let scorePercentage = (correctAnswersCount / 10) * 100;

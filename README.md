@@ -116,10 +116,13 @@ See below the main bugs I found throughout the development process:
     - FIX: Used devtools to check with console log that I have correct ids logged. Found I had duplicated the IDs; removed duplicate. Also wrapped entire script in domcontent loaded. 
 
   - Quiz answers kept showing up in position 1 (always at the same place).
+    - FIX: Tried to at first manually move the position of the correct answers. Instead found that creating a function to randomise questions was a better idea. 
 
-  - Users can pick a different answer after notification of answer correct/incorrect.
+  - Found out that users can pick a different answer after notification of answer correct/incorrect.
+    - FIX: Created a function to disable answer buttons from doing anything.
 
   - Users can skip to the end of the quiz without choosing an answer. 
+    - FIX: Create event listener to ensure user chooses an snwer first before hitting next.
 
 
 ---
