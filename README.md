@@ -11,26 +11,89 @@ Welcome to <em> Lights, Camera, Question! </em>, the ultimate destination for fi
 
 ---
 
+## Existing Features
 
-## Features
+### General Features:
 
-**Mobile-Responsive**: Optimised for both desktop and mobile devices.
+#### Responsive Design:
 
-**Quiz genres**: 6 genres of film to choose from to test your film knowledge.
+  - Optimized for both desktop and mobile devices.
+  - Uses modern CSS techniques for styling and layout.
 
-**Randomized** questions and answers for variety.
+#### Interactive Navigation:
 
-**Score tracking** and end-game results.
+  - A toggle menu for easy navigation across pages or sections.
+  - Clear and accessible links with ARIA labels.
 
-Clean and intuitive **interface**.
+  ![Toggable Navbar to home](/assets/images/lcq-navbar.png)
 
-**Footer social media** for ways to get in contact with us.
+#### Accessible Design:
+
+  - ARIA attributes and semantic HTML ensure a user-friendly experience for people using assistive technologies.
+
+#### Genre-Themed Color Palettes:
+
+  - The quiz dynamically updates the color palette to match the chosen genre, enhancing user immersion.
+
+#### Game Logic:
+
+  - The quiz consists of 10 multiple-choice questions randomly selected and shuffled from the chosen genre.
+  - Real-time feedback for correct and incorrect answers.
+  - A scoring system with visual updates.
+
+#### Progression:
+
+  - "Next Question" button ensures users complete a question before proceeding.
+  - Tracks and displays player progress and score throughout the game.
+
+  ![Next button](/assets/images/lcq-nextbutton.png)
+
+#### End Screen:
+
+  - Displays total score and a message based on performance.
+  - Includes a link to return to the homepage and try another genre.
+
+  ![Endscreen](/assets/images/lcq-endscreen.png)
+
+#### Rules Section:
+
+  - Clear guidelines for how to play the game, ensuring users understand expectations before starting.
+
+  ![Rules section](/assets/images/lcq-rules.png)
+
+#### Social Media Links:
+
+  - Links to social platforms for further engagement or updates on similar projects.
+
+  ![Social Media](/assets/images/lcq-socialmedia.png)
+
+#### Dynamic Question and Answer Management:
+
+  - Uses JavaScript to fetch and shuffle questions for a randomized experience every time the game is played.
 
 ---
 
 ### Future Features
 
-See below any additional features that I would like to implement:
+See below any future features that I would like to implement:
+
+1. Timed Mode:
+    - Add a timer for each question to increase difficulty.
+    - Display remaining time for the player.
+2. Hints:
+    - Provide an option to reveal a hint for each question (e.g., eliminate one wrong answer).
+3. Leaderboard:
+    - Save high scores locally or via a database to compare results with other players.
+4. Sound Effects:
+    - Add sound effects for correct and incorrect answers, and background music for genre-specific ambiance.
+5. Expanded Question Sets:
+    - Add more questions and genres, such as "Sci-Fi," "Drama," or "Documentary."
+6. Support for community-submitted trivia.
+8. Multiplayer Mode:
+    - Enable head-to-head or collaborative play with other players.
+9. Analytics/Statistics:
+    - Show players their average score, accuracy, and most-played genres over time.
+
 
 ---
 
