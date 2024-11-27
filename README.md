@@ -42,13 +42,34 @@ See below any additional features that I would like to implement:
 
 ![Color Palette](/assets/images/lcq-maintheme.png)
 
+The chosen color palette reflects a dynamic and engaging user experience:
+
+  - #FF5F00 (Bright Orange): Evokes excitement and energy, capturing the thrill of movie quizzes.
+  - #B20600 (Deep Red): Adds intensity and passion, symbolizing cinematic drama.
+  - #00092C (Midnight Blue): Provides a sleek, cinematic backdrop, reminiscent of a theater's ambiance.
+  - #EEEEEE (Light Gray): Balances the bold colors with clarity and simplicity for easy readability.
+
 #### Action / adventure genre
 
 ![Color Palette](/assets/images/lcq-actadv-theme.png)
 
+The color palette for the action-adventure movie genre quiz conveys energy, exploration, and excitement:
+
+  - #124076 (Deep Blue): Symbolizes depth and mystery, aligning with the adventurous spirit.
+  - #7F9F80 (Muted Green): Reflects nature and resilience, key elements of action-packed escapades.
+  - #F9E897 (Soft Yellow): Brings warmth and a sense of discovery, echoing the thrill of adventure.
+  - #FFC374 (Vibrant Orange): Adds a punch of excitement and high energy, capturing the action-driven vibe.
+
 #### Animation genre
 
 ![Color Palette](/assets/images/lcq-ani-theme.png)
+
+The color palette for the animation genre quiz exudes creativity, imagination, and wonder:
+
+  - #27005D (Deep Purple): Represents magic and fantasy, core themes in animation.
+  - #9400FF (Vivid Violet): Adds vibrancy and playfulness, capturing the whimsy of animated worlds.
+  - #AED2FF (Soft Blue): Evokes a sense of wonder and lightheartedness, appealing to all ages.
+  - #E4F1FF (Lightest Blue): Provides a gentle, airy feel, ensuring a delightful and approachable interface.
 
 #### Romance genre
 
