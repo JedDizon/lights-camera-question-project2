@@ -132,11 +132,15 @@ Below are the details of manual tests conducted to ensure functionality:
 ### W3C HTML Validation
 
 
+Link to validator results:
+
 ### W3C CSS Validation
 
+![W3C CSS Validation](assets/images/lcq-w3c-css-validation.png)
 
 ### Lighthouse testing
 
+![Lighthouse Results](assets/images/lcq-lighthouse-results.png)
 
 ### JSHint
 
