@@ -156,6 +156,7 @@ Below are the details of manual tests conducted to ensure functionality:
 | **Pass or fail results**  | User finishes a quiz | Comemnt at the end to state if they passed or failed, what percentage and score they recieved      | **SUCCESS** |
 | **Return to Home button** appearance  | User finishes a quiz | Button to bring user back to home appears at the end      | **SUCCESS** |
 | **Return to Home button**  | User clicks **Click here to return to Homepage** button | Button brings user back to homepage    | **SUCCESS** |
+| **Genre specific themes**  | User clicks on any genre quiz | Quiz loads up with relevant color palette     | **SUCCESS** |
 
 ### W3C HTML Validation
 
@@ -173,10 +174,6 @@ Link to validator results: < https://validator.w3.org/nu/?doc=https%3A%2F%2Fjedd
 
 ### JSHint
 
-#### index.js
-
-
-#### questionArrays.js
 
 
 ---
