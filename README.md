@@ -7,7 +7,7 @@ Welcome to <em> Lights, Camera, Question! </em>, the ultimate destination for fi
 
  Lights, Camera, Question! < (https://jeddizon.github.io/lights-camera-question-project2/) >
 
-![Website mockup]()
+![Website mockup](/assets/images/lcq-website-mockup.png)
 
 ---
 
@@ -38,8 +38,54 @@ See below any additional features that I would like to implement:
 
 ### Colour Scheme
 
+#### Main theme
 
+![Color Palette](/assets/images/lcq-maintheme.png)
 
+The chosen color palette reflects a dynamic and engaging user experience:
+
+  - #FF5F00 (Bright Orange): Evokes excitement and energy, capturing the thrill of movie quizzes.
+  - #B20600 (Deep Red): Adds intensity and passion, symbolizing cinematic drama.
+  - #00092C (Midnight Blue): Provides a sleek, cinematic backdrop, reminiscent of a theater's ambiance.
+  - #EEEEEE (Light Gray): Balances the bold colors with clarity and simplicity for easy readability.
+
+#### Action / adventure genre
+
+![Color Palette](/assets/images/lcq-actadv-theme.png)
+
+The color palette for the action-adventure movie genre quiz conveys energy, exploration, and excitement:
+
+  - #124076 (Deep Blue): Symbolizes depth and mystery, aligning with the adventurous spirit.
+  - #7F9F80 (Muted Green): Reflects nature and resilience, key elements of action-packed escapades.
+  - #F9E897 (Soft Yellow): Brings warmth and a sense of discovery, echoing the thrill of adventure.
+  - #FFC374 (Vibrant Orange): Adds a punch of excitement and high energy, capturing the action-driven vibe.
+
+#### Animation genre
+
+![Color Palette](/assets/images/lcq-ani-theme.png)
+
+The color palette for the animation genre quiz exudes creativity, imagination, and wonder:
+
+  - #27005D (Deep Purple): Represents magic and fantasy, core themes in animation.
+  - #9400FF (Vivid Violet): Adds vibrancy and playfulness, capturing the whimsy of animated worlds.
+  - #AED2FF (Soft Blue): Evokes a sense of wonder and lightheartedness, appealing to all ages.
+  - #E4F1FF (Lightest Blue): Provides a gentle, airy feel, ensuring a delightful and approachable interface.
+
+#### Romance genre
+
+![Color Palette](/assets/images/lcq-rom-theme.png)
+
+#### Classics genre
+
+![Color Palette](/assets/images/lcq-cla-theme.png)
+
+#### Horror genre
+
+![Color Palette](/assets/images/lcq-hor-theme.png)
+
+#### Comedy genre
+
+![Color Palette](/assets/images/lcq-com-theme.png)
 
 
 ---
@@ -86,13 +132,23 @@ Below are the details of manual tests conducted to ensure functionality:
 ### W3C HTML Validation
 
 
+Link to validator results:
+
 ### W3C CSS Validation
 
+![W3C CSS Validation](assets/images/lcq-w3c-css-validation.png)
 
 ### Lighthouse testing
 
+![Lighthouse Results](assets/images/lcq-lighthouse-results.png)
 
 ### JSHint
+
+#### index.js
+
+
+#### questionArrays.js
+
 
 ---
 
@@ -116,10 +172,13 @@ See below the main bugs I found throughout the development process:
     - FIX: Used devtools to check with console log that I have correct ids logged. Found I had duplicated the IDs; removed duplicate. Also wrapped entire script in domcontent loaded. 
 
   - Quiz answers kept showing up in position 1 (always at the same place).
+    - FIX: Tried to at first manually move the position of the correct answers. Instead found that creating a function to randomise questions was a better idea. 
 
-  - Users can pick a different answer after notification of answer correct/incorrect.
+  - Found out that users can pick a different answer after notification of answer correct/incorrect.
+    - FIX: Created a function to disable answer buttons from doing anything.
 
   - Users can skip to the end of the quiz without choosing an answer. 
+    - FIX: Create event listener to ensure user chooses an snwer first before hitting next.
 
 
 ---
@@ -175,7 +234,10 @@ Steps to set up the project on a local machine:
     - Land of Trivia < https://landoftrivia.com/movie-trivia-questions/ >
 
 - Extra help 
-  
+  - Chris Quin (Mentor)
+	  - Feedback
+	  - Tips, ideas, mindset on js flow
+
 
 - Outside Code
   - Love running/Chieftain mbt code for dropdown, initial styling for logo, initial css for website.

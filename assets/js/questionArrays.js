@@ -1,5 +1,6 @@
 /**
  * Question sets for the quizzes
+ * variable used in index.js
  */
 const questionSets = {
 actadvQs: [
@@ -828,4 +829,4 @@ romQs: [
     ]
 }
 ],
-}
+};
