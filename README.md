@@ -26,6 +26,57 @@ Clean and intuitive **interface**.
 
 **Footer social media** for ways to get in contact with us.
 
+
+## Existing Features
+
+### General Features:
+
+#### Responsive Design:
+
+  - Optimized for both desktop and mobile devices.
+  - Uses modern CSS techniques for styling and layout.
+
+#### Interactive Navigation:
+
+  - A toggle menu for easy navigation across pages or sections.
+  - Clear and accessible links with ARIA labels.
+
+#### Accessible Design:
+
+  - ARIA attributes and semantic HTML ensure a user-friendly experience for people using assistive technologies.
+
+#### Genre-Themed Color Palettes:
+
+  - The quiz dynamically updates the color palette to match the chosen genre, enhancing user immersion.
+
+#### Game Logic:
+
+  - The quiz consists of 10 multiple-choice questions randomly selected and shuffled from the chosen genre.
+  - Real-time feedback for correct and incorrect answers.
+  - A scoring system with visual updates.
+
+#### Progression:
+
+  - "Next Question" button ensures users complete a question before proceeding.
+  - Tracks and displays player progress and score throughout the game.
+
+#### End Screen:
+
+  - Displays total score and a message based on performance.
+  - Includes a link to return to the homepage and try another genre.
+
+#### Rules Section:
+
+  - Clear guidelines for how to play the game, ensuring users understand expectations before starting.
+
+#### Social Media Links:
+
+  - Links to social platforms for further engagement or updates on similar projects.
+
+#### Dynamic Question and Answer Management:
+
+  - Uses JavaScript to fetch and shuffle questions for a randomized experience every time the game is played.
+
 ---
 
 ### Future Features
