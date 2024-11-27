@@ -75,7 +75,25 @@ Welcome to <em> Lights, Camera, Question! </em>, the ultimate destination for fi
 
 ### Future Features
 
-See below any additional features that I would like to implement:
+See below any future features that I would like to implement:
+
+1. Timed Mode:
+    - Add a timer for each question to increase difficulty.
+    - Display remaining time for the player.
+2. Hints:
+    - Provide an option to reveal a hint for each question (e.g., eliminate one wrong answer).
+3. Leaderboard:
+    - Save high scores locally or via a database to compare results with other players.
+4. Sound Effects:
+    - Add sound effects for correct and incorrect answers, and background music for genre-specific ambiance.
+5. Expanded Question Sets:
+    - Add more questions and genres, such as "Sci-Fi," "Drama," or "Documentary."
+6. Support for community-submitted trivia.
+8. Multiplayer Mode:
+    - Enable head-to-head or collaborative play with other players.
+9. Analytics/Statistics:
+    - Show players their average score, accuracy, and most-played genres over time.
+
 
 ---
 
