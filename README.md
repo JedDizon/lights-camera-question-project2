@@ -38,8 +38,33 @@ See below any additional features that I would like to implement:
 
 ### Colour Scheme
 
+#### Main theme
 
+![Color Palette](/assets/images/lcq-maintheme.png)
 
+#### Action / adventure genre
+
+![Color Palette](/assets/images/lcq-actadv-theme.png)
+
+#### Animation genre
+
+![Color Palette](/assets/images/lcq-ani-theme.png)
+
+#### Romance genre
+
+![Color Palette](/assets/images/lcq-rom-theme.png)
+
+#### Classics genre
+
+![Color Palette](/assets/images/lcq-cla-theme.png)
+
+#### Horror genre
+
+![Color Palette](/assets/images/lcq-hor-theme.png)
+
+#### Comedy genre
+
+![Color Palette](/assets/images/lcq-com-theme.png)
 
 
 ---
@@ -178,7 +203,10 @@ Steps to set up the project on a local machine:
     - Land of Trivia < https://landoftrivia.com/movie-trivia-questions/ >
 
 - Extra help 
-  
+  - Chris Quin (Mentor)
+	  - Feedback
+	  - Tips, ideas, mindset on js flow
+
 
 - Outside Code
   - Love running/Chieftain mbt code for dropdown, initial styling for logo, initial css for website.
