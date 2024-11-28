@@ -282,6 +282,8 @@ See below the main bugs I found throughout the development process:
   - Users can skip to the end of the quiz without choosing an answer. 
     - FIX: Create event listener to ensure user chooses an snwer first before hitting next.
 
+  - When choosing an answer button on smaller devices ie phone, the user must click off the button to see if it is highlighted red or green to know if the answer was right or wrong as the hover effect of the button is showing instead. 
+    - FIX: used !important in the right and wrong answer class to override hover effect.
 
 ---
 
