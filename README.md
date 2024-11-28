@@ -245,6 +245,12 @@ Link to validator results: < https://validator.w3.org/nu/?doc=https%3A%2F%2Fjedd
 
 ### Different device screens
 
+![Home page on different devices](assets/images/lcq-responsiveness-test.png)
+
+Screenshot obtained by:
+
+  1. Responsive viewer extension
+  2. GoFullPage screen capture extension
 
 
 ---
