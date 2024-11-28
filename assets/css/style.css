@@ -342,13 +342,13 @@ div strong {
 
 
 .right-ans {
-    background: #C0EDA6;
-    color: var(--background-color);
+    background: #C0EDA6 !important;
+    color: var(--background-color) !important;
 }
 
 .wrong-ans {
-    background: #FD5D5D;
-    color: var(--text-color);
+    background: #FD5D5D !important;
+    color: var(--text-color) !important;
 }
 
 
