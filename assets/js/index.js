@@ -127,7 +127,7 @@ function setNextQuestion() {
 */
 function showQuestion(question) {
 
-  // Shuffle the answers before displaying them
+  // Shuffle the answers before displaying them. Used in shuffle (array function)
   const shuffledAnswers = shuffle(question.answers);
 
   //Display question text
