@@ -237,6 +237,13 @@ Link to validator results: < https://validator.w3.org/nu/?doc=https%3A%2F%2Fjedd
 
 ### JSHint
 
+#### index.js
+
+![JSHint screencapture of index.js script](assets/images/lcq-jshint-indexjs.png)
+
+#### questionArrays.js
+
+![JSHint screencapture of questionArrays.js script](assets/images/lcq-jshint-questionarraysjs.png)
 
 
 ---
