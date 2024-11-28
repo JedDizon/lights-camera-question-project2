@@ -1,3 +1,4 @@
+/* jshint esversion: 11 */ 
 /**
  * wrapped whole script in domcontentloaded to ensure event listeners are working
  */
@@ -255,7 +256,7 @@ function colorPaletteUpdate(gameType) {
     root.style.setProperty("--secondary-color", themeColors["--secondary-color"]);
     root.style.setProperty("--background-color", themeColors["--background-color"]);
     root.style.setProperty("--text-color", themeColors["--text-color"]);
-    console.log("Colors updated to:", gametype);
+    console.log("Colors updated to:", gameType);
   } else {
     console.warn("Theme not found:", gameType);
   }
