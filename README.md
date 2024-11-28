@@ -356,7 +356,8 @@ Steps to set up the project on a local machine:
 ### Media 
 
 - Icons: Font Awesome < https://fontawesome.com >
-- Photos: 
+- Photos for genres: 
+  - Pexels < https://www.pexels.com >
 - Colour palette combinations: 
   - Main color palette <  https://colorhunt.co/palette/ff5f00b2060000092ceeeeee >
 
