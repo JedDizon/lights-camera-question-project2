@@ -1,3 +1,4 @@
+/* jshint esversion: 11 */ 
 /**
  * Question sets for the quizzes
  * variable used in index.js
