@@ -98,7 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please select an answer first!");
       return;
     }
-    console.log("Next button selected");
     currentQuestionIndex++;
     setNextQuestion();
   });
@@ -107,8 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
    * Checks if question limit is reached before calling the showquestion function
   */
   function setNextQuestion() {
-    console.log("Next question");
-
     //end game after 10 qs
     if (currentQuestionIndex >= 10 || currentQuestionIndex >= shuffledQuestions.length) {
       endGame();
@@ -168,10 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
    * Function to end the game, calculate score, message user of result, and displays back to home link
    */
   function endGame() {
-    console.log("Game Over");
-
     let totalScore = document.getElementById('score').innerText;
-    console.log("Total Score: " + totalScore);
 
     // Calculate score percentage
     let passPercentage = 60;
@@ -198,7 +192,6 @@ document.addEventListener("DOMContentLoaded", () => {
    * Select answer - check if correct or wrong via true/false
    */
   function selectAnswer(e) {
-    console.log("Answer selected");
 
     // Mark that an answer has been selected
     isAnswerSelected = true;
@@ -212,17 +205,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const correct = selectedButton.dataset.correct;
 
     if (correct) {
-      console.log("Correct answer");
       incrementScore();
       correctAnswersCount++;
-      console.log(correctAnswersCount);
-
       //Add right answer css class to answer when selected
       selectedButton.classList.add("right-ans");
-
     } else {
-      console.log("Wrong answer");
-
       //Add incrorrect answer css class to answer when selected
       selectedButton.classList.add("wrong-ans");
     }
@@ -241,8 +228,6 @@ document.addEventListener("DOMContentLoaded", () => {
    * Updates page color palette
    */
   function colorPaletteUpdate(gameType) {
-    console.log("Updating color palette for theme:", gameType);
-
     // Get the root element
     const root = document.querySelector(":root");
 
@@ -256,11 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
       root.style.setProperty("--secondary-color", themeColors["--secondary-color"]);
       root.style.setProperty("--background-color", themeColors["--background-color"]);
       root.style.setProperty("--text-color", themeColors["--text-color"]);
-      console.log("Colors updated to:", gameType);
-    } else {
-      console.warn("Theme not found:", gameType);
-    }
-
+    } 
   }
 
   /**
