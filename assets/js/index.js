@@ -264,13 +264,13 @@ document.addEventListener("DOMContentLoaded", () => {
       "--primary-color": "#E72929", // red
       "--secondary-color": "#FF5BAE", // Hot Pink
       "--background-color": "#E72929", // red
-      "--text-color": "#FFFDD7" // light yellow
+      "--text-color": "#EEEEEE" // light yellow
     },
     clagame: {
       "--primary-color": "#EDDFE0", // light pink
       "--secondary-color": "#705C53", // brown
       "--background-color": "#B7B7B7", // gray
-      "--text-color": "#705C53" // brown
+      "--text-color": "#00092C" // black
     },
     horgame: {
       "--primary-color": "#0F0F0F", // black
