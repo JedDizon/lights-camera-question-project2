@@ -200,10 +200,22 @@ The color palette for the comedy genre quiz radiates joy, energy, and playfulnes
 The site was tested on the below browsers:
 
   - Chrome
-    - RESULT: Works.
+    - RESULT: 
+      - Links: OK
+      - Styling: OK
+      - Quiz: OK
     
   - Opera
-    - RESULT: Works.
+    - RESULT: 
+      - Links: OK
+      - Styling: OK
+      - Quiz: OK
+
+  - Firefox
+    - RESULT: 
+      - Links: OK
+      - Styling: OK
+      - Quiz: OK
 
 ### Manual Testing
 
