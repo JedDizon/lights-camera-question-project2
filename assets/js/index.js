@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let shuffledQuestions, currentQuestionIndex;
   const questionElement = document.getElementById("question");
   const answerButtonsElement = document.getElementById("answer-buttons");
-
   const controlsArea = document.getElementById("controls");
   const answerArea = document.getElementById("answer-buttons");
   const nextButton = document.getElementById("next-btn");
@@ -55,12 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
     colorPaletteUpdate();
   });
 
-
   /**
    * Load Questions
    */
   function loadQuestions(category) {
-
 
     //Remove intro, rules, genre selector sections to prep page for game
     const introSectionRemoval = document.getElementById("intro");
@@ -82,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Start the quiz
     setNextQuestion();
   }
-
 
   //Track if answer is selected
   let isAnswerSelected = false;
@@ -141,7 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
       button.addEventListener("click", selectAnswer);
       answerButtonsElement.appendChild(button);
     });
-
   }
 
   /**
@@ -213,7 +208,6 @@ document.addEventListener("DOMContentLoaded", () => {
       //Add incrorrect answer css class to answer when selected
       selectedButton.classList.add("wrong-ans");
     }
-
   }
 
   /**

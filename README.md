@@ -35,6 +35,9 @@ Welcome to <em> Lights, Camera, Question! </em>, the ultimate destination for fi
 
   - The quiz dynamically updates the color palette to match the chosen genre, enhancing user immersion.
 
+  ![Snips from each quiz showing the different color palettes](/assets/images/lcq-quizcolorpalettes.png)
+
+
 #### Game Logic:
 
   - The quiz consists of 10 multiple-choice questions randomly selected and shuffled from the chosen genre.
